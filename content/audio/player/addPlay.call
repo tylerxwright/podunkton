@@ -1,0 +1,10 @@
+<?php
+	include_once("../../../engine/Core.php");
+	
+	$songID = $_POST['songID'];
+	
+	$query = sprintf("UPDATE Songs SET plays = plays+1 WHERE songID = %d", $songID);
+	$rateResult = mysql_query($query, $database->connection);
+	
+	echo "";
+?>

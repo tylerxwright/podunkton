@@ -1,0 +1,21 @@
+<?php
+
+	include_once("../../engine/Core.php");
+	
+	$name = strip_tags($_POST['name']);
+	
+	if(get_magic_quotes_gpc()){
+		$name = stripslashes($name);
+	}
+	
+	$query = sprintf("select name FROM Users WHERE name='%s'", $name);
+	$result = mysql_query($query, $database->connection);
+	$num_rows = mysql_num_rows($result);
+	
+	if($name == "vallos" or $name == "cigarette" or $name == "cornwallis" or $name == "jazz" or $name == "Dot" or $name == "Ginger" or $name == "PwnChop" or $name == "HomelessGeorge" or $name == "Homeless_George" or $name == "putzy" or $name == "OldManJenkins" or $name == "old_man_jenkins" or $name == "cycon" or $name == "damien" or $name == "klunk" or $name == "karting" or $name == "epictoad" or $name == "epic_toad" or $name == "lolcat" or $name == "lol_cat"){
+		echo "num=1";
+	} else {
+		echo "num=$num_rows";
+	}
+	
+?>

@@ -1,0 +1,49 @@
+<?php
+	global $core;
+?>
+
+<span style="color: #ff0000">*</span> required<br/>
+Register
+<form action="/process/register" method="POST">
+	Username: <input type="text" name="uname" /><span style="color: #ff0000">*</span><br/>
+	Password: <input type="password" name="pword" /><span style="color: #ff0000">*</span><br/>
+	Confirm Password: <input type="password" name="pword2" /><span style="color: #ff0000">*</span><br/>
+	Sex: 
+	<select name="sex">
+		<option value="" selected="selected"></option>
+		<option value="male">male</option>
+		<option value="female">female</option>
+	</select><br/>
+	Birthday:
+	<select name="month">
+		<option value="" selected="selected"></option>
+		<?php
+			$months = $core->months();
+			for($i=0; $i<12; $i++){
+				print "<option value='".key($months)."'>".current($months)."</option>";
+				next($months);
+			}
+		?>
+	</select>
+	<select name="day">
+		<option value="" selected="selected"></option>
+		<?php
+			for($i=1; $i<=31; $i++){
+				print "<option value='$i'>$i</option>";
+			}
+		?>
+	</select
+	<select name="year">
+		<option value="" selected="selected"></option>
+		<?php
+			for($i=1900; $i<=2008; $i++){
+				print "<option value='$i'>$i</option>";
+			}
+		?>
+	</select><span style="color: #ff0000">*</span><br/>
+	Email: <input type="text" name="email" /><span style="color: #ff0000">*</span><br/>
+	AIM: <input type="text" name="aim" /><br/>
+	MSN: <input type="text" name="msn" /><br/>
+	ICQ: <input type="text" name="icq" /><br/>
+	<input type="submit" value="Submit" />
+</form>

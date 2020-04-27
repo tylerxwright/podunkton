@@ -1,0 +1,16 @@
+<?php
+
+	include_once("../../engine/Core.php");
+	
+	$query = sprintf("select code, captcha FROM Captchas ORDER BY RAND() LIMIT 1");
+	$result = mysql_query($query, $database->connection);
+	$row = mysql_fetch_object($result);
+	
+	$code = $row->code;
+	$captcha = $row->captcha;
+	
+	$return .= "code=$code&captcha=$captcha&";
+	
+	echo $return;
+	
+?>

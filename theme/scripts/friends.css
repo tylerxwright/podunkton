@@ -1,0 +1,146 @@
+.h7 {
+	color: #647DB8;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+div#top_head {
+	border-bottom: 1px solid #A3B3DB;
+	padding-bottom: 8px;
+	padding-top: 8px;
+	width: 790px;
+	overflow: hidden;
+}
+
+div#top_head_left {
+	float: left;
+	width: 380px;
+}
+
+div#top_head_right {
+	float: right;
+
+}
+
+div#top_head_icon {
+	float: left;
+	margin-top: 4px;
+	margin-right: 4px;
+}
+
+div.darkerGrey {
+	font-size: 10px;
+	color: #525252;
+
+}
+
+div.darkerGreyBold {
+	font-size: 10px;
+	color: #787878;
+	font-weight: bold;
+}
+
+div.prettyBlue {
+	font-size: 10px;
+	color: #7F92BE;
+	font-weight: bold;
+
+}
+
+div.uglyRed {
+	font-size: 10px;
+	color: #D35B5B;
+	font-weight: bold;
+
+}
+
+div.uglyRed2 {
+	font-size: 10px;
+	color: #D72430;
+	font-weight: bold;
+
+}
+
+div.friend_box {
+	width: 250px;
+	height: 82px;
+	border: 1px solid #7E7E7E;
+	float: left;
+	margin-left: 2px;
+	margin-right: 8px;
+	margin-bottom:8px;
+	overflow: hidden;
+}
+
+div.friend_box_container {
+	padding: 5px;
+	padding-bottom: 0px;
+}
+
+div.friend_box_container_left {
+	float: left;
+}
+
+div.friend_box_container_right {
+	float: right;
+}
+
+div.friend_box_container_bot {
+	padding: 0px 5px 0px 5px;
+	
+}
+
+div.user_friend_icon {
+	width: 35px;
+	height: 35px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	border: solid 1px #828282;
+	float: left;
+}
+
+div.friends_site_box_content {
+	width: 100%;
+	background-color: #CDDAF9;
+	border-left: solid 1px #7E7E7E;
+	border-bottom: solid 1px #7E7E7E;
+	border-right: solid 1px #7E7E7E;
+	overflow: hidden;
+	min-height: 300px;
+	height: expression( this.scrollHeight < 301 ? "300px" : "auto" );
+}
+
+div.led_light {
+	float: left;
+	height: 12px;
+	overflow:hidden;
+}
+
+div.status_icon {
+	width: 240px;
+	height: 13px;
+	background-image: url("/theme/images/icons/status_online.png");
+	float: left;
+	overflow: hidden;
+		
+}
+
+div#friends_ad {
+	width: 760px;
+	height: 93px;
+	padding-top: 3px;
+	padding-left: 30px;
+	background-image: url("/theme/images/forums_ad2_back.png");
+	border: solid 1px #7E7E7E;
+	margin-top: 8px;
+}
+
+div.user_title {
+	color: #fff;
+	padding-top: 4px;
+	font-size: 10pt;
+	font-weight: bold;
+	text-align: left;
+	padding-left: 5px;
+	float: left;
+}

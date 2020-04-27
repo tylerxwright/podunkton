@@ -1,0 +1,87 @@
+<?php
+
+	include_once("../../engine/Core.php");
+	
+	$uid = $_POST['uid'];
+	//$uid = 1;
+	$count = 0;
+	$return = "";
+	
+	$query = sprintf("SELECT sex FROM Users WHERE userID = %d", $uid);
+	$result = mysql_query($query, $database->connection);
+	$row = mysql_fetch_Object($result);
+	$usex = $row->sex;
+	
+	if($usex == "m"){
+		$sex = 1;
+	} else {
+		$sex = 2;
+	}
+	
+	// Not sending hair color
+	$query = sprintf("select u.sex, i.itemID, ui.equippedLevel, ui.id, i.name, ui.maxLevel, ui.slotID, ItemSWF.pngSmall, ItemSWF.pngLarge , ui.swfID , i.description , ui.equipped , i.type , i.sex , i.isPhysical , i.groups, Slots.mc, ItemSWF.link from Users as u join Users_has_Items as ui on u.userID = ui.userID_FK join Items as i on ui.itemID_FK = i.itemID join Slots on Slots.slotID = ui.slotID join ItemSWF on ItemSWF.itemswfID = ui.swfID where u.userID = %d AND i.sex = %d", $uid, $sex);
+	$result = mysql_query($query, $database->connection);
+	
+	while($row = mysql_fetch_array($result, MYSQL_ASSOC)){
+		
+		$itemID = $row['itemID'];
+		$uiID = $row['id'];
+		$name = $row['name'];
+		$slotID = $row['slotID'];
+		$swfID = $row['swfID'];
+		$description = $row['description'];
+		$equipped = $row['equipped'];
+		$type = $row['type'];
+		$sex = $row['sex'];
+		$isPhysical = $row['isPhysical'];
+		$groups = $row['groups'];
+		$pngSmall = $row['pngSmall'];
+		$pngLarge = $row['pngLarge'];
+		$equippedmc = $row['mc'];
+		$equippedlink = $row['link'];
+		$equippedLevel = $row['equippedLevel'];
+		$maxLevel = $row['maxLevel'];
+		
+		// Slots query
+		$query = sprintf("SELECT ihs.id, Slots.mc, ihs.ui_slot, Slots.slotID FROM Items JOIN Items_has_Slots AS ihs ON Items.itemID = ihs.itemID JOIN Slots ON ihs.slotID = Slots.slotID WHERE Items.itemID = %d", $itemID);
+		$result2 = mysql_query($query, $database->connection);
+		
+		$i = 0;
+		$mcString = "";
+		while($row2 = mysql_fetch_array($result2, MYSQL_ASSOC)){
+			$mc2 = $row2['mc'];
+			$ihsID = $row2['id'];
+			$uiSlot = $row2['ui_slot'];
+			$slotID2 = $row2['slotID'];
+			
+			// SWF's query
+			$query2 = sprintf("SELECT i.link, i.pngSmall, i.pngLarge, i.itemswfID, ihi.level FROM Items_has_Slots as ihs JOIN Items_has_ItemSWF as ihi ON ihs.id = ihi.ihsID JOIN ItemSWF as i ON i.itemswfID = ihi.itemswfID WHERE ihs.id = %d", $ihsID);
+			$result3 = mysql_query($query2, $database->connection);
+			
+			$j = 0;
+			$linkString = "";
+			while($row3 = mysql_fetch_array($result3, MYSQL_ASSOC)){
+				$link2 = $row3['link'];
+				$pngSmall2 = $row3['pngSmall'];
+				$pngLarge2 = $row3['pngLarge'];
+				$swfID2 = $row3['itemswfID'];
+				$level = $row3['level'];
+				$linkString .= "&link$count"."$i"."$j=$link2"."&swfID$count"."$i"."$j=$swfID2"."&swflevel$count"."$i"."$j=$level"."&pngSmall$count"."$i"."$j=$pngSmall2"."&pngLarge$count"."$i"."$j=$pngLarge2";
+				$j++;
+			}
+			$linkString .= "&lcount$count"."$i=$j";
+			$mcString .= "&mc$count"."$i=$mc2&slotID$count"."$i=$slotID2&uiSlot$count"."$i=$uiSlot".$linkString;
+			$i++;
+		}
+		$mcString .= "&mcount$count=$i";
+		
+		$return .= "itemID$count=$itemID&equippedLevel$count=$equippedLevel&uiID$count=$uiID&topSlotID$count=$slotID&topSwfID$count=$swfID&pngSmall$count=$pngSmall&pngLarge$count=$pngLarge&name$count=$name"."$mcString&description$count=$description&equipped$count=$equipped&type$count=$type&groups$count=$groups&equippedmc$count=$equippedmc&equippedlink$count=$equippedlink&maxLevel$count=$maxLevel&";
+		$count++;
+	}
+	
+	$return = "usex=$usex&count=$count&".$return;
+	//$return = "count=$count";
+	
+	echo $return;
+
+?>

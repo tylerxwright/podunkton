@@ -1,0 +1,7 @@
+<?php
+	$file = "../../".$_POST['fileToOpen'];
+	$handle = fopen($file, "r");
+	$contents = fread($handle, filesize($file));
+	echo $contents;
+	fclose($handle);
+?>

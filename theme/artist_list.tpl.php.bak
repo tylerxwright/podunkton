@@ -1,0 +1,173 @@
+<?php
+ include_once("theme/sidebars/left.tpl.php");
+?>
+<div id="page_content">
+	<div id="audio_menu" style="width: 468px">
+		<div id="audio_menu_left">
+			<div style="float: left;">ARTISTS</div>
+			<div class="audio_link">-</div>
+			<div class="audio_link">A-Z</div>
+			<div style="clear:both;"></div>
+		</div>
+		<div id="audio_menu_right">
+			PODUNKTON MUSIC
+		</div>
+		<div style="clear:both;"></div>
+	</div>
+	<div id="artist_list_content">
+		<a href="#">
+			<div class="artist_list_box"onmouseover="highlight(this); this.style.cursor = 'pointer';" onmouseout="regular(this); this.style.cursor = 'pointer';">
+				<div class="artist_box_top">
+					<div class="artist_baseline">HICKABILLY HOLLER</div>
+				</div>
+				<div class="artist_box_mid"></div>
+				<div class="artist_box_bot">
+					<div class="artist_line">
+						<div class="artist_box_left">FANS:</div>
+						<div class="artist_box_right">999,999</div>
+						<div style="clear:both;"></div>
+					</div>
+					<div style="padding-left: 33px; padding-top: 3px;">
+						<div class="stars" style="width: 80px;">
+							<div class="star_fill"></div>
+							<div class="star_fill"></div>
+							<div class="star_fill"></div>
+							<div class="star_half"></div>
+							<div class="star_back"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</a>
+		<a href="#">
+			<div class="artist_list_box"onmouseover="highlight(this); this.style.cursor = 'pointer';" onmouseout="regular(this); this.style.cursor = 'pointer';">
+				<div class="artist_box_top">
+					<div class="artist_baseline">HICKABILLY HOLLER</div>
+				</div>
+				<div class="artist_box_mid"></div>
+				<div class="artist_box_bot">
+					<div class="artist_line">
+						<div class="artist_box_left">FANS:</div>
+						<div class="artist_box_right">999,999</div>
+						<div style="clear:both;"></div>
+					</div>
+					<div style="padding-left: 33px; padding-top: 3px;">
+						<div class="stars" style="width: 80px;">
+							<div class="star_fill"></div>
+							<div class="star_fill"></div>
+							<div class="star_fill"></div>
+							<div class="star_half"></div>
+							<div class="star_back"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</a>
+		<a href="#">
+			<div class="artist_list_box"onmouseover="highlight(this); this.style.cursor = 'pointer';" onmouseout="regular(this); this.style.cursor = 'pointer';">
+				<div class="artist_box_top">
+					<div class="artist_baseline">HICKABILLY HOLLER</div>
+				</div>
+				<div class="artist_box_mid"></div>
+				<div class="artist_box_bot">
+					<div class="artist_line">
+						<div class="artist_box_left">FANS:</div>
+						<div class="artist_box_right">999,999</div>
+						<div style="clear:both;"></div>
+					</div>
+					<div style="padding-left: 33px; padding-top: 3px;">
+						<div class="stars" style="width: 80px;">
+							<div class="star_fill"></div>
+							<div class="star_fill"></div>
+							<div class="star_fill"></div>
+							<div class="star_half"></div>
+							<div class="star_back"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</a>
+		<div style="clear: both;"></div>
+		<a href="#">
+			<div class="artist_list_box"onmouseover="highlight(this); this.style.cursor = 'pointer';" onmouseout="regular(this); this.style.cursor = 'pointer';">
+				<div class="artist_box_top">
+					<div class="artist_baseline">HICKABILLY HOLLER</div>
+				</div>
+				<div class="artist_box_mid"></div>
+				<div class="artist_box_bot">
+					<div class="artist_line">
+						<div class="artist_box_left">FANS:</div>
+						<div class="artist_box_right">999,999</div>
+						<div style="clear:both;"></div>
+					</div>
+					<div style="padding-left: 33px; padding-top: 3px;">
+						<div class="stars" style="width: 80px;">
+							<div class="star_fill"></div>
+							<div class="star_fill"></div>
+							<div class="star_fill"></div>
+							<div class="star_half"></div>
+							<div class="star_back"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</a>
+		<a href="#">
+			<div class="artist_list_box"onmouseover="highlight(this); this.style.cursor = 'pointer';" onmouseout="regular(this); this.style.cursor = 'pointer';">
+				<div class="artist_box_top">
+					<div class="artist_baseline">HICKABILLY HOLLER</div>
+				</div>
+				<div class="artist_box_mid"></div>
+				<div class="artist_box_bot">
+					<div class="artist_line">
+						<div class="artist_box_left">FANS:</div>
+						<div class="artist_box_right">999,999</div>
+						<div style="clear:both;"></div>
+					</div>
+					<div style="padding-left: 33px; padding-top: 3px;">
+						<div class="stars" style="width: 80px;">
+							<div class="star_fill"></div>
+							<div class="star_fill"></div>
+							<div class="star_fill"></div>
+							<div class="star_half"></div>
+							<div class="star_back"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</a>
+		<a href="#">
+			<div class="artist_list_box"onmouseover="highlight(this); this.style.cursor = 'pointer';" onmouseout="regular(this); this.style.cursor = 'pointer';">
+				<div class="artist_box_top">
+					<div class="artist_baseline">HICKABILLY HOLLER</div>
+				</div>
+				<div class="artist_box_mid"></div>
+				<div class="artist_box_bot">
+					<div class="artist_line">
+						<div class="artist_box_left">FANS:</div>
+						<div class="artist_box_right">999,999</div>
+						<div style="clear:both;"></div>
+					</div>
+					<div style="padding-left: 33px; padding-top: 3px;">
+						<div class="stars" style="width: 80px;">
+							<div class="star_fill"></div>
+							<div class="star_fill"></div>
+							<div class="star_fill"></div>
+							<div class="star_half"></div>
+							<div class="star_back"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</a>
+		<div style="clear: both;"></div>
+	</div>
+</div>
+<?php include_once("theme/sidebars/right.tpl.php"); ?>
+<div style="clear:both;"></div>

@@ -1,0 +1,201 @@
+a.blue {
+	color: #647DB8;
+}
+
+a.blue:hover {
+	color: #3E507E;
+	text-decoration: underline;
+}
+
+div.spacer {
+	margin-top: 8px;
+}
+
+div#shops_top_left {
+	width: 285px;
+	height: 226px;
+	float: left;
+}
+
+div#shops_top_right {
+	width: 500px;
+	float: left;
+	padding-left: 6px;
+}
+
+div#shops_top_sign {
+	padding-left: 4px;
+}
+
+div#shops_search_box {
+	width: 473px;
+	height: 72px;
+	margin-left: 8px;
+	margin-bottom: 5px;
+	background-image: url("/theme/images/shops_search_back");
+	background-repeat: no-repeat;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #526490;
+	overflow: hidden;
+}
+
+div.shops_title {
+	color: #fff;
+	padding-top: 4px;
+	font-size: 10pt;
+	font-weight: bold;
+	text-align: left;
+	padding-left: 15px;
+	float: left;
+}
+
+div.shops_store_box {
+	width: 388px;
+	float: left;
+}
+
+div.shops_store_sign {
+	width: 386px;
+	height: 61px;
+	border-top: solid 1px #828282;
+	border-left: solid 1px #828282;
+	border-right: solid 1px #828282;
+	overflow: hidden;
+}
+
+div.shops_store_grey {
+	width: 378px;
+	height: 14px;
+	padding-left: 8px;
+	font-size: 7pt;
+	background-color: #DCDCDC;
+}
+
+div.shops_store_box_inner {
+	padding: 10px 10px 0px 10px;
+	height: 125px;
+}
+
+div.shops_store_item {
+	width: 48%;
+	float: left;
+	padding: 3px;
+
+	background-color: #fff;
+	overflow: hidden;
+}
+
+div.shops_go_shopping {
+	float: right;
+	width: 370px; 
+	margin-right: 6px; 
+	margin-bottom: 8px;
+	text-align: right; 
+	font-size: 7pt;
+	overflow: hidden;
+}
+
+div#store_sign {
+	width: 450px;
+	height: 69px;
+	border: solid 1px #828282;
+	padding-left: 50px;
+	padding-top: 6px;
+	background-image: url("/theme/images/store_sign_bg.png");
+	background-repeat: repeat-x;
+}
+
+img.store_l1 {
+	float: left;
+	border-bottom: solid 1px #828282;
+}
+
+img.store_l2 {
+	float: left;
+	border-left: solid 1px #828282;
+	border-bottom: solid 1px #828282;
+}
+
+img.store_l3 {
+	float: left;
+	border-left: solid 1px #828282;
+	border-bottom: solid 1px #828282;
+}
+
+div#store_selector {
+	width: 792px;
+	height: 5px;
+	border-bottom: solid 1px #828282;
+	background-color: #CDDAF9;
+}
+
+div.store_item_row {
+	width: 772px;
+	height: 100px;
+	padding: 10px 10px 10px 10px;
+	border-bottom: solid 1px #CDDAF9;
+}
+
+div.store_item_icon {
+	width: 70px;
+	height: 70px;
+	float: left;
+	margin-top: 10px;
+	background-image: url("/theme/images/item_tmp2.png");
+	
+}
+
+div.store_item_mid {
+	width: 550px;
+	margin-left: 20px;
+	float: left;
+	font-size: 7pt;
+	color: #222;
+}
+
+tr.store_item_tr {
+	margin-bottom: 8px;
+}
+
+td.store_bold {
+	font-weight: bold;
+}
+
+div.store_item_tools {
+	width: 130px;
+	float: left;
+}
+
+img.store_btn {
+	margin-bottom: 3px;
+}
+
+div.shops_bread {
+	text-align: center;
+	font-size: 7pt;
+	height: 15px;
+	color: #595959;
+	padding-top: 3px;
+}
+
+select.barber_select {
+	float: left;
+	height: 24px;
+	border: none;
+	font-size: 13pt;
+}
+
+div.barber_all {
+	float: left;
+	cursor: pointer;
+}
+
+div.barber_color {
+	float: left;
+	padding-left: 4px;
+	padding-top: 3px;
+	height: 21px;
+	width: 20px;
+	cursor: pointer;
+}

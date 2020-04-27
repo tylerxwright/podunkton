@@ -1,0 +1,295 @@
+div#seasons_bar {
+	width: 643px;
+	height: 100px;
+	margin-top: 10px;
+	border: solid 1px #7E7E7E;
+}
+
+div#audio_menu {
+	width: 643px;
+	height: 20px;
+	font-size: 7pt;
+	color: #989898;
+}
+
+div.audio_link {
+	padding-left: 10px;
+	float: left;
+}
+
+div#audio_menu_left {
+	float: left;
+	padding-left: 12px;
+}
+
+div#audio_menu_right {
+	float: right;
+}
+
+div.top_charts {
+	background-color:#FFFFFF;
+	background-image:url(/theme/images/top_toons_top_2.png);
+	background-repeat:repeat-x;
+	height:47px;
+	margin-bottom:1px;
+	padding:6px 0 12px 5px;
+	width:167px;
+	overflow: hidden;
+}
+
+div.chart_top {
+	font-size: 8pt;
+	font-weight: bold;
+}
+
+div.chart_left {
+	width: 115px;
+	font-size: 7pt;
+	float: left;
+	overflow: hidden;
+}
+
+div.chart_right {
+	float: left;
+	padding-left: 6px;
+	overflow: hidden;
+}
+
+div#top_content {
+	width: 100%;
+	padding-left: 15px;
+	padding-bottom: 5px;
+	overflow: hidden;
+}
+
+div.top_artist {
+	width: 100px;
+	padding: 5px 10px 5px 10px;
+	float: left;
+}
+
+div.top_artist_top {
+	width: 100px;
+	height: 100px;
+	background-color: #DDD;
+}
+
+div.top_artist_bottom {
+	width: 100px;
+	font-size: 8pt;
+	padding-top: 3px;
+	text-decoration: underline;
+	text-align: center;
+}
+
+div#wdck_logo {
+	width: 88px;
+	height: 33px;
+	margin: 4px 0px 3px 10px;
+	background-image: url("/theme/images/wdck.png");
+}
+
+span.wdck {
+	font-size: 7pt;
+	text-decoration: underline;
+	color: #000;
+}
+
+span#small_grey {
+	font-size: 7pt;
+	color: #696969;
+}
+
+div#artist_list_content {
+	width: 638px;
+	padding-left: 4px;
+}
+
+div.artist_list_box {
+	width: 115px;
+	height: 164px;
+	float: left;
+	padding: 4px 10px 0px 10px;
+	margin: 0px 11px 10px 10px;
+}
+
+div.artist_box_top {
+	width: 113px;
+	height: 25px;
+	text-align: center;
+	font-size: 7pt;
+	position: relative;
+}
+
+div.artist_box_mid {
+	width: 113px;
+	height: 83px;
+	border: solid 1px #000;
+}
+
+div.artist_box_bot {
+	width: 113px;
+	height: 20px;
+	font-size: 7pt;
+}
+
+div.artist_baseline {
+	bottom: 0px;
+	left: 0px;
+	position: absolute;
+}
+
+p {
+	padding: 0px;
+	margin: 0px;
+}
+
+div.artist_line {
+	width: 100%;
+}
+
+div.artist_box_left {
+	width: 40%;
+	float: left;
+}
+
+div.artist_row_box {
+	width: 635px;
+	height: 160px;
+	overflow: hidden;
+}
+
+div.artist_box_right {
+	width: 60%;
+	float: left;
+	text-align: right;
+}
+
+div#artist_view_left {
+	width: 237px;
+	float: left;
+}
+
+div#artist_view_right {
+	width: 549px;
+	margin-left: 8px;
+	float: left;
+}
+
+div.audio_title {
+	color: #fff;
+	padding-top: 4px;
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+div.box_inner {
+	padding: 1px;
+}
+
+div.box_inner_content {
+	padding: 3px 8px 5px 8px;
+	background-image: url("/theme/images/box_fade.png");
+	background-repeat: repeat-x;
+	font-size: 8pt;
+	color: #767676;
+}
+
+div#genre {
+	width: 216px;
+	padding-bottom: 4px;
+}
+
+div#artist_pic {
+	width: 214px;
+	height: 144px;
+	border: solid 1px #000;
+}
+
+div#artist_content {
+	width: 100%;
+	padding-top: 4px;
+}
+
+div#artist_members {
+	width: 217px;
+	padding-top: 10px;
+	font-size: 7pt;
+	font-weight: bold;
+}
+
+div.artist_avatar {
+	width: 33px;
+	height: 33px;
+	float: left;
+	border: solid 1px #000;
+}
+
+div.artist_name {
+	width: 85px;
+	height: 33px;
+	padding-left: 7px;
+	float: left;
+	font-size: 7pt;
+}
+
+a.artist_name {
+	color: #898989;
+	text-decoration: underline;
+}
+
+a.artist_name:hover {
+	color: #000000;
+}
+
+div#forum_discussion {
+	padding-top: 8px;
+	padding-left: 33px;
+}
+
+div#player {
+	width: 545px;
+	height: 436px;
+	border: solid 1px #7E7E7E;
+	background-color: #CDDAF9;
+	overflow: hidden;
+}
+
+div#player_container {
+	width: 529px; /*actual size is 529px*/
+	height: 420px;
+	/*border: solid 1px red;*/
+	margin-top: 8px;
+	margin-left: 8px;
+	overflow: hidden;
+}
+
+div#bio_content {
+	width: 525px;
+	font-size: 8pt;
+	margin: 0px 1px 0px 1px;
+	padding: 5px 8px 10px 8px;
+	background-image: url("/theme/images/desc_fade.png");
+	background-repeat: repeat-x;
+}
+
+div#bio_bottom {
+	width: 535px;
+	height: 23px;
+	margin-left: 3px;
+	margin-right: 3px;
+	padding-top: 4px;
+	padding-right: 4px;
+	border-top: solid 1px #828282;
+	background-image: url("/theme/images/desc_fade.png");
+	background-repeat: repeat-x;
+}
+
+div#artist_ad {
+	width: 507px;
+	height: 64px;
+	padding-top: 5px;
+	padding-left: 38px;
+	background-image: url("/theme/images/artist_ad_back.png");
+	border: solid 1px #7E7E7E;
+}

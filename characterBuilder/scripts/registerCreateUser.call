@@ -1,0 +1,97 @@
+<?php
+	
+	include_once("../../engine/Core.php");
+	global $podunkton;
+	
+	$name = strip_tags($_POST['name']);
+	$email = strip_tags($_POST['email']);
+	$pword = strip_tags($_POST['pword']);
+	$notify = $_POST['notifications'];
+	$skin = $_POST['skinNum'];
+	$sex = strip_tags($_POST['sex']);
+	$hair = $_POST['hairid'];
+	$eyes = $_POST['eyesid'];
+	$eyebrows = $_POST['eyebrowsid'];
+	$betacode = $_POST['betacode'];
+	
+	if(BETA == 1) {
+		$query = sprintf("SELECT id FROM Beta WHERE id = %d", $betacode);
+		$resultBeta = mysql_query($query, $database->connection);
+		
+		$betaRows = mysql_num_rows($resultBeta);
+	}
+	
+	if($betaRows == 1 OR BETA != 1) {
+	
+		$signup = date('Y-m-d H:i:s');
+		
+		if($sex == "m"){
+			$itemSex = 1;
+		} else {
+			$itemSex = 2;
+		}
+		
+		if(get_magic_quotes_gpc()){
+			$name = stripslashes($name);
+			$email = stripslashes($email);
+			$pword = stripslashes($pword);
+		}
+		
+		$oldPword = $pword;
+		$pword = md5($pword);
+		
+		$munniez = MUNNIEZ_ON_SIGNUP;
+
+		// Add the user!
+		$query = sprintf("INSERT INTO Users(name, password, sex, email, skin, notify, hair, eyes, eyebrows, signup, munniez) VALUES('%s', '%s', '%s', '%s', %d, %d, %d, %d, %d, '%s', %d )", $name, $pword, $sex, $email, $skin, $notify, $hair, $eyes, $eyebrows, $signup, $munniez);
+		$result = mysql_query($query, $database->connection);
+		
+		$userID = mysql_insert_id();
+		
+		// Give the new user the default package of items
+		$query = sprintf("SELECT i.name, i.itemID, i.defaultEquip, s.slotID, iswf.itemswfID FROM Items as i JOIN Items_has_Slots as ihs ON i.itemID = ihs.itemID JOIN Slots as s ON s.slotID = ihs.slotID JOIN Items_has_ItemSWF as ihi ON ihs.id = ihi.ihsID JOIN ItemSWF as iswf ON iswf.itemswfID = ihi.itemswfID WHERE i.isdefault = 1 AND i.sex = %d", $itemSex);
+		$result = mysql_query($query, $database->connection);
+		while($row = mysql_fetch_object($result)){
+			
+			$itemID = $row->itemID;
+			$slotID = $row->slotID;
+			$swfID = $row->itemswfID;
+			
+			$queryGroups = sprintf("SELECT i.name, i.itemID, i.defaultEquip, s.slotID, iswf.itemswfID FROM Items as i JOIN Items_has_Slots as ihs ON i.itemID = ihs.itemID JOIN Slots as s ON s.slotID = ihs.slotID JOIN Items_has_ItemSWF as ihi ON ihs.id = ihi.ihsID JOIN ItemSWF as iswf ON iswf.itemswfID = ihi.itemswfID WHERE groups = %d", $itemID);
+			$resultGroups = mysql_query($queryGroups, $database->connection);
+			while($rowGroups = mysql_fetch_object($resultGroups)){
+				$itemID2 = $rowGroups->itemID;
+				$slotID2 = $rowGroups->slotID;
+				$swfID2 = $rowGroups->itemswfID;
+				
+				$queryInsert = sprintf("INSERT INTO Users_has_Items(userID_FK, itemID_FK, equipped, slotID, swfID, maxLevel, equipDate, equippedLevel) VALUES(%d, %d, 1, %d, %d, 1, '%s', 1)", $userID, $itemID2, $slotID2, $swfID2, "0000-00-00");
+				$resultInsert = mysql_query($queryInsert, $database->connection);
+			}
+			
+			if($row->defaultEquip == 1){
+				$query2 = sprintf("INSERT INTO Users_has_Items(userID_FK, itemID_FK, equipped, slotID, swfID, maxLevel, equipDate, equippedLevel) VALUES(%d, %d, 1, %d, %d, 1, '%s', 1)", $userID, $itemID, $slotID, $swfID, $signup);
+			} else {
+				$query2 = sprintf("INSERT INTO Users_has_Items(userID_FK, itemID_FK, equipped, slotID, swfID, maxLevel, equipDate, equippedLevel) VALUES(%d, %d, 0, %d, %d, 1, '%s', 1)", $userID, $itemID, $slotID, $swfID, "0000-00-00");
+			}
+			
+			$result2 = mysql_query($query2, $database->connection);
+		}
+		
+		if(BETA == 1) {
+			$query = sprintf("UPDATE Beta SET valid = 0 WHERE id = %d", $betacode);
+			$resultBeta = mysql_query($query, $database->connection);
+		}
+		
+		$msg = "became a member of this fine community";
+		$podunkton->recentActivitySignup($name, $userID, "becameUser", $msg);
+		$podunkton->addBadgeSignup(1, $userID, $name);
+		
+		
+		// Login user
+		$session->login($name, $oldPword, 0);
+	} else {
+		header("Location: /");
+	}
+	
+	
+?>

@@ -1,0 +1,38 @@
+<?php
+
+	function destacaTexto($highlite,$string){
+		return str_ireplace($highlite,"<b>".$highlite."</b>",$string);
+	}
+	
+	include_once("../../engine/Core.php");
+	
+	$xmlDoc = new DOMDocument('1.0', 'utf-8');
+	$xmlDoc->formatOutput = true;
+	
+	$root = $xmlDoc->createElement('root');
+	$root = $xmlDoc->appendChild($root);
+	//$_POST['toText'] = "vallos";
+	try {
+		
+		$result = $database->db_query("SELECT userID, name FROM Users WHERE name LIKE '%".$_POST['toText']."%'");
+		while($row = mysql_fetch_object($result)){
+			$item = $xmlDoc->createElement('item');
+			$item = $root->appendChild($item);
+			$item->setAttribute('id',$row->userID);
+			$texto = $row->name;
+			$label = destacaTexto($_POST['toText'],$texto);
+			$item->setAttribute('label',rawurlencode($label));
+			$item->setAttribute('flabel',rawurlencode($texto));
+		}
+		
+	} catch (PDOException $e) {
+		$item = $xmlDoc->createElement('item');
+		$item = $root->appendChild($item);
+		$item->setAttribute('id','0');
+		$label = $e->getMessage();
+		$item->setAttribute('label',rawurlencode($label));
+	}
+	
+	header("Content-type:application/xml; charset=utf-8");
+	echo $xmlDoc->saveXML();
+?>

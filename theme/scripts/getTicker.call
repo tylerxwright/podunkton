@@ -1,0 +1,12 @@
+<?php
+	include_once("../../engine/Core.php");
+	$c = 0;
+	$returnString = '';
+	$result = $database->db_query("SELECT num, daydate FROM Ticker LIMIT 7");
+	while($row = mysql_fetch_object($result)){
+		$returnString .= "&num$c=".$row->num."&daydate$c=".$row->daydate."";
+		$c++;
+	}
+	
+	echo "c=".$c.$returnString;
+?>

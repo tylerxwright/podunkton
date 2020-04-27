@@ -1,0 +1,459 @@
+div.top_toons {
+	width: 167px;
+	height: 58px;
+	margin-bottom: 1px;
+	padding: 12px 0px 12px 5px;
+	background-color: #fff;
+	background-image: url("/theme/images/top_toons_top_2.png");
+	background-repeat: repeat-x;
+	overflow: hidden;
+}
+
+
+div#seasons_bar {
+	width: 643px;
+	height: 100px;
+	margin-top: 10px;
+	border: solid 1px #7E7E7E;
+
+}
+
+div#toons_menu {
+	width: 775px;
+	padding-top: 8px;
+	padding-right: 10px;
+	padding-bottom: 8px;
+	font-size: 7pt;
+	color: #989898;
+	border-bottom: solid 1px #A3B3DB
+
+}
+
+div#season_toons_menu {
+	width: 780px;
+	padding-right: 8px;
+	font-size: 7pt;
+	color: #989898;
+	height: 70px;
+	border-bottom: solid 1px #A3B3DB;
+}
+
+div#toons_menu_left {
+	float: left;
+	padding-left: 12px;
+}
+
+div#toons_menu_right {
+	float: right;
+}
+
+div.toons_link {
+	padding-left: 10px;
+	float: left;
+}
+
+div#seasons_list {
+	width: 650px;
+	/*border: solid 1px #7E7E7E;*/
+}
+
+div.season {
+	width: 650px;
+	height: 170px;
+	margin: 1px;
+	margin-bottom: 4px;
+	padding-top: 5px;
+	background-image: url("/theme/images/top_toons_top_2.png");
+	background-repeat: repeat-x;
+	border: solid 1px #7E7E7E;
+	
+}
+
+div.season_left {
+	width: 113px;
+	padding: 5px;
+	float: left;
+}
+
+div.season_thumb {
+	border: solid 1px #000;
+	width: 111px;
+	height: 81px;
+}
+
+div.season_info {
+	font-size: 7pt;
+	color: #4B4B4B;
+}
+
+table.season_table_info {
+	padding: 0px;
+	margin: 0px;
+}
+
+td.season_td_left {
+	width: 56px;
+	padding: 0px;
+	text-align: left;
+}
+
+td.season_td_right {
+	width: 57px;
+	padding: 0px;
+	text-align: right;
+}
+
+td.season_td_rating {
+	padding-left: 7px;
+}
+
+div.season_right {
+	float: left;
+	width: 330px;
+	height: 165px;
+	padding: 5px 4px 0px 4px;
+}
+
+div.season_right_top {
+	width: 100%;
+	height: 156px;
+}
+
+div.season_title {
+	width: 100%;
+	font-size: 12pt;
+	font-weight: bold;
+}
+
+div.season_content {
+	width: 100%;
+	padding-top: 5px;
+	font-size: 8pt;
+}
+
+div.season_right_bottom {
+	width: 100%;
+	height: 14px;
+	padding-top: 4px;
+	font-size: 7pt;
+	float: left;
+}
+
+div.season_bottom_left {
+	float: left;
+	width: 230px;
+	text-align: center;
+}
+
+div.season_bottom_right {
+	float: right;
+	text-align: right;
+	width: 100px;
+}
+
+div.season_bar_button {
+	width: 208px;
+	margin-left: 1px;
+	margin-right: 1px;
+	float: left;
+}
+
+div.season_bottom_button {
+	width: 205px;
+	height: 90px;
+	background-color: #FFF;
+}
+
+div#toon_left {
+	width: 247px;
+	float: left;
+}
+
+div#toon_right {
+	width: 387px;
+	margin-left: 9px;
+	float: left;
+}
+
+div.toon_title {
+	color: #fff;
+	padding-top: 4px;
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+div#toon_pic {
+	width: 220px;
+	height: 160px;
+	margin-top: 5px;
+	margin-left: 6px;
+	margin-bottom: 5px;
+	border: solid 1px #000;
+}
+
+div#toon_info {
+	width: 224px;
+	font-size: 8pt;
+	color: #000;
+	margin-left: 6px;
+	margin-bottom: 5px;
+}
+
+table.toon_table_info {
+	padding: 0px;
+	margin: 0px;
+}
+
+td.toon_td_left {
+	width: 100px;
+	padding: 0px;
+	text-align: left;
+}
+
+td.toon_td_right {
+	width: 122px;
+	padding: 0px;
+	text-align: right;
+}
+
+div#newgrounds_top {
+	width: 224px;
+	font-size: 8pt;
+	color: #000;
+	margin-left: 6px;
+	margin-bottom: 5px;
+}
+
+dl {
+	margin-top: 0px;
+	margin-bottom: 5px;
+}
+
+dt {
+	font-weight: bold;
+	margin-top: 5px;
+	margin-bottom: 3px;
+}
+
+div#dt_left {
+	float: left;
+}
+
+div#dt_right {
+	float: right;
+}
+
+dd {
+	color: #898989;
+	margin-left: 20px;
+}
+
+dd#vote {
+	font-size: 7pt;
+}
+
+div.cast_box {
+	width: 112px;
+	height: 33px;
+	float: left;
+}
+
+div.cast_avatar {
+	width: 33px;
+	height: 33px;
+	float: left;
+	border: solid 1px #000;
+}
+
+div.cast_name {
+	width: 70px;
+	height: 33px;
+	padding-left: 7px;
+	float: left;
+	font-size: 7pt;
+}
+
+a.cast_name {
+	color: #898989;
+}
+
+a.cast_name:hover {
+	color: #000000;
+}
+
+div#cast_more {
+	font-size: 7pt;
+	width: 224px;
+	height: 10px;
+	padding-top: 10px;
+	text-align: right;
+}
+
+ul#trivia {
+	font-size: 7pt;
+}
+
+li.trivia {
+	padding-bottom: 5px;
+}
+
+div#watch_block {
+	width: 385px;
+	height: 68px;
+	border: solid 1px #000;
+}
+
+div#watch_left {
+	width: 170px;
+	height: 68px;
+	padding-left: 5px;
+	float: left;
+}
+
+div#watch_icon {
+	float: left;
+}
+
+div#watch_rating_text {
+	float: left;
+	padding-left: 4px;
+	padding-top: 14px;
+}
+
+ul#watch_rating_text {
+	font-size: 7pt;
+}
+
+div#watch_right {
+	width: 205px;
+	height: 58px;
+	float: left;
+	padding-top: 10px;
+	padding-right: 5px;
+	text-align: right;
+}
+
+a#watch_toon {
+	font-size: 14pt;
+	text-decoration: underline;
+	color: #000;
+}
+
+a#watch_toon:hover {
+	color: #6D83B7;
+}
+
+a.watch_toon2 {
+	font-size: 7pt;
+	color: #898989;
+}
+
+a.watch_toon2:hover {
+	color: #000;
+}
+
+div#desc_content {
+	width: 367px;
+	font-size: 8pt;
+	margin: 0px 1px 0px 1px;
+	padding: 5px 8px 10px 8px;
+	background-image: url("/theme/images/desc_fade.png");
+	background-repeat: repeat-x;
+}
+
+div#desc_bottom {
+	width: 375px;
+	height: 23px;
+	margin-left: 3px;
+	margin-right: 3px;
+	padding-top: 4px;
+	padding-right: 4px;
+	border-top: solid 1px #828282;
+	background-image: url("/theme/images/desc_fade.png");
+	background-repeat: repeat-x;
+}
+
+div.toons_title {
+	color: #fff;
+	padding-top: 4px;
+	font-size: 10pt;
+	font-weight: bold;
+	text-align: left;
+	padding-left: 15px;
+	float: left;
+}
+
+div.user_comment_left {
+	width: 40px;
+	float: left;
+	padding-right: 8px;
+}
+
+div.user_comment_icon {
+	width: 35px;
+	height: 35px;
+	margin-left: 3px;
+	margin-right: 0px;
+	border: solid 1px #828282;
+}
+
+div.user_comment_right {
+	width: 320px;
+	float: left;
+}
+
+div.user_comment_top {
+	width: 100%;
+	font-size: 9pt;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border-top: solid 1px #000;
+	border-bottom: solid 1px #CDDAF9;
+}
+
+div.user_comment_bot {
+	width: 100%;
+	font-size: 9pt;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+div.user_comment_actions {
+	font-size: 8pt;
+	text-align: right;
+	margin-bottom: 10px;
+}
+
+div.user_comment_bottom {
+	width: 100%;
+	font-size: 9pt;
+	border-top: solid 1px #647DB8;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: right;
+}
+
+div.user_badges_small {
+	font-size: 9pt;
+	line-height: 9pt;
+	padding: 1px 5px 2px 5px; 
+}
+
+div.user_badges_left {
+	float: left;
+}
+
+div.user_badges_right {
+	float: right;
+	color: #647DB8;
+}
+
+div.user_title {
+	color: #fff;
+	padding-top: 4px;
+	font-size: 10pt;
+	font-weight: bold;
+	text-align: left;
+	padding-left: 5px;
+	float: left;
+}

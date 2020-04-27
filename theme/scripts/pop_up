@@ -1,0 +1,20 @@
+#pop_top_left {
+	width: 6px;
+	height: 26 px;
+	background-image: url("/theme/images/pop_up/top_left.png");
+	overflow: hidden;
+}
+
+#pop_top_middle {
+	height: 26px;
+	width: 100%;
+	background-image: url("/theme/images/pop_up/header_bg.png");
+	background-repeat: repeat-y;
+}
+
+#pop_top_right{
+	width: 6px;
+	height: 26 px;
+	background-image: url("/theme/images/pop_up/top_right.png");
+	overflow: hidden;
+}

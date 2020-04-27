@@ -1,0 +1,32 @@
+<?php
+
+	include_once("../../engine/Core.php");
+	
+	$color = $_POST['color'];
+	$type = $_POST['type'];
+	$usersex = $_POST['usersex'];
+	//$color = $_GET['color'];
+	//$type = $_GET['type'];
+	//$usersex = $_GET['usersex'];
+	
+	$count = 0;
+	$return = '';
+	
+	$query = sprintf("select pid, png, slot1, slot2, swf1, swf2 FROM Physical_Features WHERE color='%s' AND sex='%s' AND type='%s'", $color, $usersex, $type);
+	$result = mysql_query($query, $database->connection);
+	while($row = mysql_fetch_object($result)){
+		$pid = $row->pid;
+		$png = $row->png;
+		$slot1 = $row->slot1;
+		$slot2 = $row->slot2;
+		$swf1 = $row->swf1;
+		$swf2 = $row->swf2;
+		$return .= "pid$count=$pid&png$count=$png&slot1_$count=$slot1&slot2_$count=$slot2&swf1_$count=$swf1&swf2_$count=$swf2&";
+		$count++;
+	}
+	
+	$return .= "count=$count";
+	
+	echo $return;
+	
+?>

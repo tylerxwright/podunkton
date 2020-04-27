@@ -1,0 +1,280 @@
+<link rel="stylesheet" type="text/css" href="/theme/scripts/header.css" />
+<script type="text/javascript">
+	
+	var nav_menu;
+	
+	function home1() {
+		//obj.style.backgroundImage.src = "/theme/images/main_button_home2.png";
+		nav_menu = document.getElementById("nav_menu2_left");
+		str = "<a class='nav2_link' href='/forums'>News</a>"+
+			  "<a class='nav2_link' href='/forums'>FAQ</a>"+
+			  "<a class='nav2_link' href='/forums'>Orientation</a>";
+		//replaceHTML(nav_menu, str);
+		nav_menu.innerHTML = str;
+	}
+	
+	function toons() {
+		str = "<a class='nav2_link' href='/forums'>Featured Toon</a>"+
+			  "<a class='nav2_link' href='/forums'>Top Toons</a>"+
+			  "<a class='nav2_link' href='/forums'>Classic</a>"+
+			  "<a class='nav2_link' href='/forums'>Pre-Season</a>"+
+			  "<a class='nav2_link' href='/forums'>Season 1</a>";
+		//replaceHTML(nav_menu, str);
+		nav_menu.innerHTML = str;
+	}
+	
+	function games() {
+		str = "<a class='nav2_link' href='/forums'>Featured Game</a>"+
+			  "<a class='nav2_link' href='/forums'>Top Games</a>"+
+			  "<a class='nav2_link' href='/forums'>Scoreboards</a>";
+		//replaceHTML(nav_menu, str);
+		nav_menu.innerHTML = str;
+	}
+	
+	function audio() {
+		str = "<a class='nav2_link' href='/forums'>Featured Artist</a>"+
+			  "<a class='nav2_link' href='/forums'>Top Artists</a>"+
+			  "<a class='nav2_link' href='/forums'>WDCK Radio</a>"+
+			  "<a class='nav2_link' href='/forums'>Artist Listings</a>";
+		nav_menu.innerHTML = str;
+	}
+	
+	function community() {
+		str = "<a class='nav2_link' href='/forums'>Forums</a>"+
+			  "<a class='nav2_link' href='/forums'>Flea Market</a>"+
+			  "<a class='nav2_link' href='/forums'>Users</a>"+
+			  "<a class='nav2_link' href='/forums'>Store</a>"+
+			  "<a class='nav2_link' href='/forums'>Barber Shop</a>"+
+			  "<a class='nav2_link' href='/forums'>Fans Section</a>";
+		nav_menu.innerHTML = str;
+	}
+	
+	function vault() {
+		str = "<a class='nav2_link' href='/forums'>Old Toons</a>"+
+			  "<a class='nav2_link' href='/forums'>Old Games</a>"+
+			  "<a class='nav2_link' href='/forums'>Old Songs</a>"+
+			  "<a class='nav2_link' href='/forums'>The Junkyard</a>";
+		nav_menu.innerHTML = str;
+	}
+	
+	window.onload = home1;
+	
+</script>
+<div id="header">
+	<div id="header_left">
+		<div id="header_window">
+			<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="631" height="165" id="window" align="middle">
+			<param name="allowScriptAccess" value="sameDomain" />
+			<param name="movie" value="/theme/flash/window.swf?dummy=<?php echo time(); ?>" /><param name="quality" value="high" /><param name="wmode" value="transparent" /><param name="bgcolor" value="#ffffff" /><embed src="/theme/flash/window.swf?dummy=<?php echo time(); ?>" quality="high" wmode="transparent" bgcolor="#ffffff" width="631" height="165" name="window" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+			</object>
+		</div>
+	</div>
+	<div id="header_right">
+<?php
+	if($session->user):
+?>
+<?php
+	$query = sprintf("SELECT sex FROM Users WHERE userID = %d", $session->user);
+	$result = mysql_query($query, $database->connection);
+	$row = mysql_fetch_Object($result);
+	$sex = $row->sex;
+?>
+		<div id="login_box">
+			<div id="login_top">
+				<div id="login_top_left">
+					<div id="login_top_left1"></div>
+					<div id="login_top_left2"></div>
+					<div id="login_top_left3">
+						
+					</div>
+				</div>
+				<div id="login_top_right"></div>
+			</div>
+			<div id="login_content">
+				<div id="login_drop_left"></div>
+				<div id="login_drop_center"></div>
+				<div id="login_drop_right"></div>
+				<div id="login_content_inner">
+					<div id="login_active_left">
+						<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="65" height="114" id="logo" align="middle">
+						<param name="allowScriptAccess" value="sameDomain" />
+						<param name="movie" value="/characterBuilder/viewers/viewer_<?php echo $sex; ?>_1.swf?uid=<?php echo $session->user; ?>&dummy=<?php echo time(); ?>" /><param name="quality" value="high" /><param name="wmode" value="transparent" /><param name="bgcolor" value="#ffffff" /><embed src="/characterBuilder/viewers/viewer_<?php echo $sex; ?>_1.swf?uid=<?php echo $session->user; ?>&dummy=<?php echo time(); ?>" quality="high" wmode="transparent" bgcolor="#ffffff" width="65" height="114" name="logo" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+						</object>
+					</div>
+					<div id="login_active_right">
+						<span style="color: #000000; font-weight: bold;">
+							<?php print $session->username; ?><br/>
+						</span>
+						<a class="logout" href="/process/logout">(Logout)</a><br/>
+						<div id="toolbox">
+							<div class="tool">
+								<div class="tool_left">
+									<img src="/theme/images/icon_user.png" />
+								</div>
+								<div class="tool_right">
+									<a class="toolbox" href="/user/<?php print $session->username; ?>">
+										My Profile
+									</a>
+								</div>
+								<div style="clear:both;"></div>
+							</div>
+							<div class="tool">
+								<div class="tool_left">
+									<img src="/theme/images/icon_user.png" />
+								</div>
+								<div class="tool_right">
+									<a class="toolbox" href="/admin">
+										Admin
+									</a>
+								</div>
+								<div style="clear:both;"></div>
+							</div>
+							<div class="tool">
+								<div class="tool_left">
+									<img src="/theme/images/icon_mail.png" />
+								</div>
+								<div class="tool_right">
+									<a class="toolbox" href="/mail/sent">
+									<?php
+										$result = $database->db_query("SELECT COUNT(id) AS 'count' FROM Sent WHERE sender=".$session->user);
+										$row = mysql_fetch_object($result);
+										if($row->count > 0){
+											echo "Sent(".$row->count.")";
+										} else {
+											echo "Sent";
+										}
+									?>
+									</a>
+								</div>
+								<div style="clear:both;"></div>
+							</div>
+							<div class="tool">
+								<div class="tool_left">
+									<img src="/theme/images/icon_mail.png" />
+								</div>
+								<div class="tool_right">
+									<a class="toolbox" href="/mail/inbox">
+									<?php
+										$result = $database->db_query("SELECT COUNT(id) AS 'count' FROM Inbox WHERE reciever=".$session->user);
+										$row = mysql_fetch_object($result);
+										if($row->count > 0){
+											echo "Inbox(".$row->count.")";
+										} else {
+											echo "Inbox";
+										}
+									?>
+									</a>
+								</div>
+								<div style="clear:both;"></div>
+							</div>
+							<div class="tool">
+								<div class="tool_left">
+									<img src="/theme/images/icon_requests.png" />
+								</div>
+								<div class="tool_right">
+									<a class="toolbox" href="/requests/<?php print $session->username; ?>">
+										Requests
+									</a>
+								</div>
+								<div style="clear:both;"></div>
+							</div>
+							<div class="tool">
+								<div class="tool_right">
+									<?php 
+										$result = $database->db_query("SELECT munniez FROM Users WHERE userID=".$session->user);
+										$row = mysql_fetch_object($result);
+									?>
+									Munniez: <span id="munniez"><?php echo $row->munniez; ?></span>
+								</div>
+								<div style="clear:both;"></div>
+							</div>
+						</div>
+					</div>
+					<div style="clear:both;"></div>
+				</div>
+			</div>
+			<div id="login_bottom"></div>
+		</div>
+<?php
+	else:
+?>
+		<div id="login_box">
+			<div id="login_top">
+				<div id="login_top_left">
+					<div id="login_top_left1"></div>
+					<div id="login_top_left2"></div>
+					<div id="login_top_left3">
+						<a class="login_link" href="/register">register</a>
+					</div>
+				</div>
+				<div id="login_top_right"></div>
+			</div>
+			<div id="login_content">
+				<div id="login_drop_left"></div>
+				<div id="login_drop_center"></div>
+				<div id="login_drop_right"></div>
+				<div id="login_content_inner">
+					<form action="/process/login" method="POST">
+						username<br/>
+						<input type="text" name="user" size="17"/><br/>
+						password<br/>
+						<input type="password" name="pass" size="17"/><br/>
+						<input type="checkbox" name="remember" value="1" /><span style="line-height: 8pt;"> remember me</span><br/>
+						<input type="submit" value="Login" />
+					</form>
+				</div>
+			</div>
+			<div id="login_bottom"></div>
+		</div>
+<?php
+	endif;
+?>
+	</div>
+	
+</div>
+<div id="header_smooth_bar">
+	<div id="smooth_bar_top"></div>
+	<div id="nav_container">
+		<div id="nav_menu">
+			<ul>
+				<li id="home" onmouseover="home1();"><a id="header_link" href="/"></a></li><li class="spacer"></li>
+				<li id="toons" onmouseover="toons();"><a id="header_link" href="/toons"></a></li><li class="spacer"></li>
+				<li id="games" onmouseover="games();"><a id="header_link" href="/games"></a></li><li class="spacer"></li>
+				<li id="audio" onmouseover="audio();"><a id="header_link" href="/audio"></a></li><li class="spacer"></li>
+				<li id="community" onmouseover="community();"><a id="header_link" href="/community"></a></li><li class="spacer"></li>
+				<li id="vault" onmouseover="vault();"><a id="header_link" href="/vault"></a></li>
+				
+			</ul>
+		</div>
+		<div id="nav_menu2">
+			<div id="nav_menu2_left"></div>
+			<div id="nav_menu2_right"><span id="stupidLamer"></span></div>
+		</div>
+	</div>
+	<div id="smooth_bar_right">
+		<div id="usersOnline">
+			<div style="float: left;">
+				<img src="/theme/images/onlineicon.png" />
+			</div>
+			<div style="float: left; text-align: center; padding-left: 5px; line-height: 7pt;">
+				USERS ONLINE<br/>
+				<span style="color: #59698E;"><?php print $session->usersOnline; ?></span>
+			</div>
+			<div style="float: left; padding-left: 5px;">
+				<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="88" height="19" id="window" align="middle">
+				<param name="allowScriptAccess" value="sameDomain" />
+				<param name="movie" value="/theme/flash/clock.swf" /><param name="quality" value="high" /><param name="wmode" value="transparent" /><param name="bgcolor" value="#ffffff" /><embed src="/theme/flash/clock.swf" quality="high" wmode="transparent" bgcolor="#ffffff" width="88" height="19" name="window" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+				</object>
+			</div>
+		</div>
+		<div id="searchArea">
+			<form action="/process/login" method="POST">
+				<input style="" type="text" name="user" size="12"/>
+				<input style="width: 70px;" type="submit" value="SEARCH" />
+			</form>
+		</div>
+		<div id="advancedSearch">
+			<a id="advanced" href="">ADVANCED SEARCH</a>
+		</div>
+	</div>
+</div>

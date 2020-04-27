@@ -1,0 +1,428 @@
+a.blue {
+	color: #647DB8;
+}
+
+a.blue:hover {
+	color: #3E507E;
+	text-decoration: underline;
+}
+
+a.grey {
+	color: #828282;
+	font-size: 8pt;
+}
+
+a.grey:hover {
+	color: #444;
+	font-size: 8pt;
+	text-decoration: underline;
+}
+
+div#trade_top {
+	width: 782px;
+	padding-bottom: 4px;
+	border-bottom: solid 1px #A3B3DB;
+}
+
+div#trade_top_left {
+	float: left;
+}
+
+div#trade_top_right {
+	float: right;
+	text-align: right;
+	margin-right: 10px;
+}
+
+div#trade_content {
+	width: 752px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+div#trade_directions {
+	color: #526490;
+	font-size: 8pt;
+}
+
+div#trade_start_box {
+	width: 100%;
+	margin-top: 8px;
+	overflow: hidden;
+}
+
+div#trade_start_box_left {
+	width: 531px;
+	height: 36px;
+	float: left;
+	background-image: url("/theme/images/start_trade_head.png");
+	overflow: hidden;
+}
+
+div#trade_username {
+	color: #fff;
+	padding-top: 7px;
+	font-weight: bold;
+	font-size: 11pt;
+	float: right;
+}
+
+div#trade_uname_input {
+	padding-left: 5px;
+	padding-top: 6px;
+	float: right;
+}
+
+input#trade_input {
+	width: 100px;
+}
+
+div#trade_uname_submit {
+	padding-left: 5px;
+	padding-top: 5px;
+	float: right;
+	padding-right: 15px;
+}
+
+div#trade_start_box_right {
+	padding-top: 25px;
+	padding-left: 8px;
+	font-size: 7pt;
+	float: left;
+}
+
+div.trade_phase_box {
+	width: 186px;
+	float: left;
+}
+
+div.trade_phase_top {
+	color: #526490;
+	width: 100%;
+	height: 16px;
+	font-size: 8pt;
+	text-align: center;
+	border-left: solid 1px #B6C5EA;
+	border-bottom: solid 1px #B6C5EA;
+}
+
+div.trade_phase_box_inner {
+	min-height: 400px;
+	height: expression( this.scrollHeight < 401 ? "400px" : "auto" ); /* sets min-height for IE */
+	border-left: solid 1px #B6C5EA;
+	border-bottom: solid 1px #B6C5EA;
+	padding: 5px;
+}
+
+div.trade_icon {
+	width: 43px;
+	height: 43px;
+	border: solid 1px #333;
+}
+
+div#forums_ad2 {
+	width: 745px;
+	height: 93px;
+	padding-top: 3px;
+	padding-left: 30px;
+	background-image: url("/theme/images/forums_ad2_back.png");
+	border: solid 1px #7E7E7E;
+}
+
+img#trade_cancel {
+	margin-left: 55px;
+	margin-top: 8px;
+	cursor: pointer;
+}
+
+div#trade_message {
+	margin-top: 8px;
+	margin-bottom: 8px;
+	margin-left: 8px;
+	margin-right: 0px;
+	width: 782px;
+	font-size: 8pt;
+	color: #555;
+	overflow: hidden;
+}
+
+
+
+div.trade_box {
+	float: left;
+}
+
+div.trade_top_left {
+	width: 159px;
+	height: 13px;
+	float: left;
+	overflow: hidden;
+	background-image: url("/theme/images/trade/top_left.png");
+}
+
+div.trade_top_right {
+	height: 13px;
+	font-size: 7pt;
+	padding-left: 20px;
+	float: left;
+	overflow: hidden;
+}
+
+div.trade_left {
+	width: 15px;
+	height: 441px;
+	float: left;
+	background-image: url("/theme/images/trade/left.png");
+	overflow: hidden;
+}
+
+div.trade_box_inside {
+	float: left;
+	overflow: hidden;
+}
+
+div.trade_character {
+	width: 126px;
+	height: 163px;
+	border-bottom: solid 1px #353535;
+	border-right: solid 1px #353535;
+	float: left;
+}
+
+div.trade_box_top_content {
+	float: left;
+}
+
+div.trade_top_mid {
+	width: 17px;
+	height: 15px;
+	float: left;
+	background-image: url("/theme/images/trade/top_mid.png");
+	overflow: hidden;
+}
+
+div.trade_top_right2 {
+	width: 192px;
+	height: 8px;
+	margin-top: 7px;
+	background-image: url("/theme/images/trade/top_right.png");
+	float: left;
+	overflow: hidden;
+}
+
+div.trade_head_box {
+	width: 204px;
+	height: 21px;
+	color: #fff;
+	font-weight: bold;
+	font-size: 10pt;
+	padding-left: 5px;
+	padding-top: 3px;
+	border-top: solid 1px #353535;
+	border-bottom: solid 1px #353535;
+	background-image: url("/theme/images/trade/head_back.png");
+	overflow: hidden;
+}
+
+div.trade_head_desc {
+	width: 201px;
+	height: 15px;
+	padding-left: 8px;
+	font-size: 8pt;
+	color: #444;
+	background-color: #c3c3c3;
+	overflow: hidden;
+}
+
+div.trade_info {
+	width: 209px;
+	height: 107px;
+	border-bottom: solid 1px  #353535;
+	background-image: url("/theme/images/trade/left_info.png");
+	overflow: hidden;
+}
+
+div.trade_info2 {
+	width: 209px;
+	height: 107px;
+	border-bottom: solid 1px  #353535;
+	background-image: url("/theme/images/trade/right_info.png");
+	overflow: hidden;
+}
+
+div.trade_mid_head {
+	width: 336px;
+	height: 25px;
+	border-bottom: solid 1px  #353535;
+	background-image: url("/theme/images/trade/head_back2.png");
+	overflow: hidden;
+}
+
+div.trade_mid_head_left {
+	padding-top: 2px;
+	padding-left: 8px;
+	float: left;
+	overflow: hidden;
+}
+
+div.trade_mid_head_right {
+	font-size: 7pt;
+	color: #444;
+	padding-top: 6px;
+	padding-left: 10px;
+	float: left;
+	overflow: hidden;
+}
+
+div.trade_box_items {
+	width: 326px;
+	height: 204px;
+	background-color: #fff;
+	border-bottom: solid 1px  #353535;
+	padding: 5px;
+	/*padding: 10px;*/
+	overflow: hidden;
+}
+
+div.trade_bot_head {
+	width: 336px;
+	height: 24px;
+	border-bottom: solid 1px  #353535;
+	background-image: url("/theme/images/trade/head_back2.png");
+	overflow: hidden;
+}
+
+div.trade_bot_head_left {
+	padding-top: 1px;
+	padding-left: 8px;
+	float: left;
+	overflow: hidden;
+}
+
+div.trade_bot_head_mid {
+	margin-top: 1px;
+	margin-left: 0px;
+	margin-bottom: 0px;
+	margin-right: 0px;
+	padding: 0px;
+	border: solid 1px #868686;
+	float: left;
+	overflow: hidden;
+}
+
+div.trade_bot_head_right {
+	margin-top: 2px;
+	margin-left: 5px;
+	float: left;
+	overflow: hidden;
+}
+
+div.trade_bot {
+	width: 336px;
+	height: 10px;
+	background-image: url("/theme/images/trade/bottom.png");
+	overflow: hidden;
+}
+
+div.trade_right {
+	width: 12px;
+	height: 434px;
+	margin-top: 7px;
+	float: left;
+	background-image: url("/theme/images/trade/right.png");
+	overflow: hidden;
+}
+
+input#trade_input_pword {
+	width: 95px;
+}
+
+div#trade_between {
+	width: 54px;
+	height: 454px;
+	background-image: url("/theme/images/trade/trade_between.png");
+	float: left;
+}
+
+div.shops_title {
+	color: #fff;
+	padding-top: 4px;
+	font-size: 10pt;
+	font-weight: bold;
+	text-align: left;
+	padding-left: 15px;
+	float: left;
+}
+
+div#store_selector {
+	width: 792px;
+	height: 5px;
+	border-bottom: solid 1px #828282;
+	background-color: #CDDAF9;
+}
+
+img.store_l1 {
+	float: left;
+	border-bottom: solid 1px #828282;
+}
+
+img.store_l2 {
+	float: left;
+	border-left: solid 1px #828282;
+	border-bottom: solid 1px #828282;
+}
+
+img.store_l3 {
+	float: left;
+	border-left: solid 1px #828282;
+	border-bottom: solid 1px #828282;
+}
+
+a.trade_item {
+	padding-right: 8px;
+	padding-bottom: 8px;
+	float: left;
+}
+
+div#trade_your_account {
+	padding-left: 7px;
+	padding-top: 8px;
+	font-weight: bold;
+	font-size: 8pt;
+	color: #3e3e3e;
+}
+
+div#trade_their_account {
+	padding-left: 98px;
+	padding-top: 20px;
+	font-weight: bold;
+	font-size: 10pt;
+	color: #3e3e3e;
+}
+
+
+div#trade_info_inputs {
+	padding-left: 90px;
+	padding-top: 5px;
+}
+
+input.trade_infoi {
+	width: 100px;
+	margin-bottom: 7px;
+}
+
+div.inventory_box_hack {
+	min-height: 300px;
+	padding: 8px;
+	height: expression( this.scrollHeight < 301 ? "300px" : "auto" );
+}
+
+div#detailsBox {
+	width: 300px;
+	min-height: 150px;
+	height: auto;
+	position: absolute;
+	background-color: #F5F7FF;
+	border: solid 1px #333;
+	display: none;
+}

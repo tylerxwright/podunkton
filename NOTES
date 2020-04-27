@@ -1,0 +1,56 @@
+Podunkton.com
+File: Notes
+
+03-11-2008
+
+	Somethings wrong with the way highscores work in the database. It deals
+	with referential integrity.
+	
+	Need to remember that the Users table isn't complete. It lacks character
+	details such as hair, skin, etc.
+	
+	If /engine/Process.php gets too big, its going to need to be split into
+	multiple files to reduce the server having to load one huge class.
+	
+	Comments on nodes still need to work through the forum. I just need to
+	figure out the best way to go about doing that.
+	
+	Things like favoriteGame depend on a reference and to satisfy the zero
+	or more condition, a None row is to be inserted as id 1 for Games and
+	Toons. I feel like there is a better way to do this though.
+	
+	Be thinking about a base sql file that can put the system into a standard
+	test layout.
+	
+	I just discovered a sweet new method to make changes to the database. The
+	method is located in the Process class and its used in the edit proc. It
+	could be possible that I will use this method from here on out!
+	
+	Change Error class to be called message class and make it just dispatch
+	messages in a default way
+	
+	In the forums, categories and subcategories need a position
+	
+	In the forum part of the database, subcategory might be changed to topics
+	
+	Be thinking about ON DELETE CASCADE
+	
+	Add Category order in the forums as well as on subcategories
+	
+	Turn the forums into a class
+	
+	SWF's on site should not be BLOBS, put them in content folder
+	
+	User page privacy, setting individual fields for friends/members/guests
+	
+	Item Dow Jones
+	
+	Albums only have generes Artists genres are based off of their albums
+	
+	Change Bands to Artists in database
+	
+	On search bar, when your in a section, it automatically singles out the section
+	your currently viewing. So if your in music, music is checked so your able to search
+	music...Cool!
+	
+	

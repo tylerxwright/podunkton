@@ -1,0 +1,225 @@
+<?php
+	global $core;
+	global $database;
+	
+	$user = $session->user;
+	
+?>
+
+<script type="text/javascript">
+	
+	var inventoryItems = new Array();
+	var myTradeItems = new Array();
+	var theirTradeItems = new Array();
+	
+	function addItem(index) {
+		var tmp = new Array(inventoryItems[index][0], inventoryItems[index][1], inventoryItems[index][2], inventoryItems[index][3]);
+		myTradeItems.push(tmp);
+		
+		mycontainer = document.getElementById("trade_items_container");
+		mycontainer.innerHTML += "<img style='cursor: pointer;' src='/characterBuilder/images/"+inventoryItems[index][2]+"' title='"+inventoryItems[index][3]+"' onclick='removeItem("+(myTradeItems.length-1)+");' />";
+		
+		var leftSide = new Array();
+		var length = inventoryItems.length;
+		for(i=0; i<length; i++){
+			if(i != index) {
+				leftSide[i] = inventoryItems.shift();
+			} else {
+				var trash = new Array();
+				trash[0] = inventoryItems.shift();
+				inventoryItems = leftSide.concat(inventoryItems);
+				break;
+			}
+		}
+		
+		var str = '';
+		myInventory = document.getElementById("myInventory");
+		
+		for(i=0; i<inventoryItems.length; i++){
+			str += "<img style='cursor: pointer;' src='/characterBuilder/images/"+inventoryItems[i][2]+"' title='"+inventoryItems[i][3]+"' onclick='addItem("+i+");' />";
+		}
+		
+		myInventory.innerHTML = str;
+	}
+	
+	function removeItem(index) {
+		var tmp = new Array(myTradeItems[index][0], myTradeItems[index][1], myTradeItems[index][2], myTradeItems[index][3]);
+		inventoryItems.push(tmp);
+		
+		myInventory = document.getElementById("myInventory");
+		myInventory.innerHTML += "<img style='cursor: pointer;' src='/characterBuilder/images/"+myTradeItems[index][2]+"' title='"+myTradeItems[index][3]+"' onclick='addItem("+(inventoryItems.length-1)+");' />";
+		
+		var leftSide = new Array();
+		var length = myTradeItems.length;
+		for(i=0; i<length; i++){
+			if(i != index) {
+				leftSide[i] = myTradeItems.shift();
+			} else {
+				var trash = new Array();
+				trash[0] = myTradeItems.shift();
+				myTradeItems = leftSide.concat(myTradeItems);
+				break;
+			}
+		}
+		
+		var str = '';
+		mycontainer = document.getElementById("trade_items_container");
+		
+		for(i=0; i<myTradeItems.length; i++){
+			str += "<img style='cursor: pointer;' src='/characterBuilder/images/"+myTradeItems[i][2]+"' title='"+myTradeItems[i][3]+"' onclick='removeItem("+i+");' />";
+		}
+		
+		mycontainer.innerHTML = str;
+	}
+	
+</script>
+
+<div id="trade_top">
+	<div id="trade_top_left">
+		<img src="/theme/images/trade_sign.png" />
+	</div>
+	<div id="trade_top_right">
+		<a class="blue" href="/community">Back to Community Home</a><br/>
+		<form name="cancel_trade" action="" method="POST">
+			<img id="trade_cancel" src="/theme/images/cancel_trade.png" onclick="document.cancel_trade.submit();" />
+		</form>
+	</div>
+	<div style="clear: both;"></div>
+</div>
+<div id="trade_message">
+	<div style="float: left; padding-top: 4px; padding-right: 8px;">Title of Trade Message:</div>
+	<div style="float: left; padding-right: 20px;"><input style="width: 400px;" type="text" name="message" /></div>
+	<div style="float: left; padding-top: 2px;"><input type="checkbox" name="emailMe" /></div>
+	<div style="float: left; font-size: 7pt; padding-top: 5px; padding-left: 4px;">Send a notification to my email</div>
+	<div style="clear: both;"></div>
+</div>
+
+<div class="trade_box" style="margin-left: 8px;">
+	<div class="trade_top_left"></div>
+	<div class="trade_top_right"></div>
+	<div style="clear: both;"></div>
+	<div class="trade_left"></div>
+	<div class="trade_box_inside">
+		<div class="trade_character">
+		
+		</div>
+		<div class="trade_box_top_content">
+			<div class="trade_top_mid"></div>
+			<div class="trade_top_right2"></div>
+			<div style="clear: both;"></div>
+			<div class="trade_head_box">CHARACTER NAME</div>
+			<div class="trade_head_desc">Offer munniez or credits!</div>
+			<div class="trade_info">
+			
+			</div>
+		</div>
+		<div style="clear: both;"></div>
+		<div class="trade_mid_head">
+			<div class="trade_mid_head_left"><img src="/theme/images/trade/items_to_be_traded.png" /></div>
+			<div class="trade_mid_head_right">(select from inventory below)</div>
+			<div style="clear: both;"></div>
+		</div>
+		<div id="trade_items_container" class="trade_box_items">
+			
+		</div>
+		<div class="trade_bot_head">
+			<div class="trade_bot_head_left"><img src="/theme/images/trade/confirm_password.png" /></div>
+			<div class="trade_bot_head_mid">
+				<input id="trade_input_pword" type="password" name="pword" />
+			</div>
+			<div class="trade_bot_head_right">
+				<img src="/theme/images/trade/offer.png" />
+			</div>
+		</div>
+		<div class="trade_bot"></div>
+	</div>
+	<div class="trade_right"></div>
+</div>
+<div id="trade_between"></div>
+<div class="trade_box">
+	<div class="trade_top_left"></div>
+	<div class="trade_top_right"><img src="/theme/images/icon_mail.png" /> <a href="#" class="blue">Send them a message!</a></div>
+	<div style="clear: both;"></div>
+	<div class="trade_left"></div>
+	<div class="trade_box_inside">
+		<div class="trade_character">
+		
+		</div>
+		<div class="trade_box_top_content">
+			<div class="trade_top_mid"></div>
+			<div class="trade_top_right2"></div>
+			<div style="clear: both;"></div>
+			<div class="trade_head_box">CHARACTER NAME</div>
+			<div class="trade_head_desc">Offer munniez or credits!</div>
+			<div class="trade_info2">
+			
+			</div>
+		</div>
+		<div style="clear: both;"></div>
+		<div class="trade_mid_head">
+			<div class="trade_mid_head_left"><img src="/theme/images/trade/items_to_be_traded.png" /></div>
+			<div class="trade_mid_head_right">(select from inventory below)</div>
+			<div style="clear: both;"></div>
+		</div>
+		<div class="trade_box_items">
+			
+		</div>
+		<div class="trade_bot_head">
+			<div class="trade_bot_head_left"><img src="/theme/images/trade/confirm_password.png" /></div>
+			<div class="trade_bot_head_mid">
+				<input id="trade_input_pword" type="password" name="pword" />
+			</div>
+			<div class="trade_bot_head_right">
+				<img src="/theme/images/trade/offer.png" />
+			</div>
+		</div>
+		<div class="trade_bot"></div>
+	</div>
+	<div class="trade_right"></div>
+</div>
+<div style="clear: both;"></div>
+<div style="width: 792px; height: 8px;"></div>
+
+<div id="shops_toolbox">
+	<div class="site_box" style="width: 792px;">
+		<div class="site_box_head">
+			<div class="shops_title">MY INVENTORY</div>
+		</div>
+		<div class="site_box_content" style="background-color: #fff;">
+			<img class="store_l1" src="/theme/images/store_btn_sortby.png" />
+			<a href="#"><img class="store_l2" src="/theme/images/store_btn_new.png" /></a>
+			<a href="#"><img class="store_l2" src="/theme/images/store_btn_all.png" /></a>
+			<a href="#"><img class="store_l2" src="/theme/images/store_btn_head.png" /></a>
+			<a href="#"><img class="store_l2" src="/theme/images/store_btn_tops.png" /></a>
+			<a href="#"><img class="store_l2" src="/theme/images/store_btn_bottoms.png" /></a>
+			<a href="#"><img class="store_l2" src="/theme/images/store_btn_shoes.png" /></a>
+			<a href="#"><img class="store_l2" src="/theme/images/store_btn_acc.png" /></a>
+			<a href="#"><img class="store_l3" src="/theme/images/store_btn_item.png" /></a>
+			<div style="clear:both;"></div>
+			<div id="store_selector"></div>
+			<div style="min-height: 300px; padding: 8px;" id="myInventory">
+			<?php
+				$resultI = $database->db_query("SELECT uhi.id, i.itemID, i.name, i.png FROM Items as i JOIN Users_has_Items as uhi ON i.itemID = uhi.itemID_FK JOIN Users as u ON uhi.userID_FK = u.userID WHERE userID = $user AND groups=0 ORDER BY name ASC");
+				$counter = 0;
+				while($rowI = mysql_fetch_object($resultI)) {
+			?>
+<script type="text/javascript">
+	var tmp = new Array();
+	tmp.push(<?php echo $rowI->id; ?>, <?php echo $rowI->itemID; ?>, '<?php echo $rowI->png; ?>', '<?php echo $rowI->name; ?>'); 
+	inventoryItems.push(tmp);
+</script>
+				<img style="cursor: pointer;" src="/characterBuilder/images/<?php echo $rowI->png; ?>" title="<?php echo $rowI->name; ?>" onclick="addItem(<?php echo $counter; ?>);" />
+			<?php 
+					$counter++;
+				} 
+			?>
+			</div>
+		</div>
+	</div>
+</div>
+			
+<div style="width: 792px; height: 8px;"></div>
+<div id="forums_ad2">
+	<img src="/theme/images/forums_ad2.png" />
+</div>
+<div style="width: 792px; height: 16px;"></div>

@@ -1,0 +1,69 @@
+<?php
+	
+	include_once("../../engine/Core.php");
+	
+	$uid = $_POST['uid'];
+	$type = $_POST['type'];
+	$itemID = $_POST['itemID'];
+	
+	$count = 0;
+	$return = "";
+	
+	$query = sprintf("SELECT sex FROM Users WHERE userID = %d", $uid);
+	$result = mysql_query($query, $database->connection);
+	$row = mysql_fetch_Object($result);
+	$sex = $row->sex;
+	
+	$query = sprintf("select Slots.mc, ItemSWF.link from Users as u join Users_has_Items as ui on u.userID = ui.userID_FK join Items as i on ui.itemID_FK = i.itemID join Slots on Slots.slotID = ui.slotID join ItemSWF on ItemSWF.itemswfID = ui.swfID where ui.equipped = 1 AND u.userID = %d", $uid);
+	$result = mysql_query($query, $database->connection);
+	while($row = mysql_fetch_array($result, MYSQL_ASSOC)){
+		$mc = $row['mc'];
+		$link = $row['link'];
+		$return .= "mc$count=$mc&link$count=$link&";
+		$count++;
+	}
+	
+	$query = sprintf("select s.head, s.forearm1, s.arm1, s.body, s.forearm2, s.arm2, s.legs from Users as u join Skins as s on u.skin = s.skinNum WHERE u.userID = %d AND s.sex = u.sex", $uid);
+	$result = mysql_query($query, $database->connection);
+	$row = mysql_fetch_object($result);
+	
+	$head = $row->head;
+	$forearm1 = $row->forearm1;
+	$arm1 = $row->arm1;
+	$body = $row->body;
+	$forearm2 = $row->forearm2;
+	$arm2 = $row->arm2;
+	$legs = $row->legs;
+	
+	$return .= "count=$count&head=$head&forearm1=$forearm1&arm1=$arm1&body=$body&forearm2=$forearm2&arm2=$arm2&legs=$legs&";
+	
+	if($type == "hair") {
+		$query = sprintf("select p.swf1, p.swf2 FROM Physical_Features as p WHERE p.pid = %d", $itemID);
+	} else {
+		$query = sprintf("select p.swf1, p.swf2 FROM Physical_Features as p JOIN Users as u ON u.hair = p.pid WHERE u.sex = '%s' AND u.userId = %d", $sex, $uid);
+	}
+	$result = mysql_query($query, $database->connection);
+	$row = mysql_fetch_object($result);
+	$swf1 = $row->swf1;
+	$swf2 = $row->swf2;
+	$return .= "hairswf1=$swf1&hairswf2=$swf2&";
+	
+	$query = sprintf("select p.swf1, p.swf2 FROM Physical_Features as p JOIN Users as u ON u.eyes = p.pid WHERE u.sex = '%s' AND u.userId = %d", $sex, $uid);
+	$result = mysql_query($query, $database->connection);
+	$row = mysql_fetch_object($result);
+	$swf1 = $row->swf1;
+	$return .= "eyesswf1=$swf1&";
+	
+	if($type == "eyebrows") {
+		$query = sprintf("select p.swf1, p.swf2 FROM Physical_Features as p WHERE pid = %d", $itemID);
+	} else {
+		$query = sprintf("select p.swf1, p.swf2 FROM Physical_Features as p JOIN Users as u ON u.eyebrows = p.pid WHERE u.sex = '%s' AND u.userId = %d", $sex, $uid);
+	}
+	$result = mysql_query($query, $database->connection);
+	$row = mysql_fetch_object($result);
+	$swf1 = $row->swf1;
+	$swf2 = $row->swf2;
+	$return .= "eyebrowsswf1=$swf1&eyebrowsswf2=$swf2&";
+	
+	echo $return;
+?>

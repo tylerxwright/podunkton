@@ -1,0 +1,44 @@
+<?php
+	global $database;
+?>
+<b>Add New Toon</b><br/>
+<form enctype="multipart/form-data" action="/process/admin_toon_add" method="POST">
+	<table>
+		<tr>
+			<td>Name:</td>
+			<td><input type="text" name="name" /></td>
+		</tr>
+		<tr>
+			<td>Season:</td>
+			<td><input type="text" name="season" /></td>
+		</tr>
+		<tr>
+			<td>File:</td>
+			<td><input type="file" name="file" /></td>
+		</tr>
+		<tr>
+			<td>Icon:</td>
+			<td><input type="file" name="icon" /></td>
+		</tr>
+		<tr>
+			<td valign="top">description:</td>
+			<td><textarea cols="40" rows="5" name="description"></textarea></td>
+		</tr>
+		<tr>
+			<td>Episode:</td>
+			<td><input type="text" name="episode" /></td>
+		</tr>
+		<tr>
+			<td>PointCost:</td>
+			<td><input type="text" name="pointcost" /></td>
+		</tr>
+		<tr>
+			<td>Featured:</td>
+			<td><input type="checkbox" name="featured" /></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><br/><input type="submit" value="Submit" /></td>
+		</tr>
+	</table>
+</form>

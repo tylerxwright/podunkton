@@ -1,0 +1,26 @@
+<?php
+
+	include_once("../../engine/Core.php");
+	
+	$skinid = $_POST['skinid'];
+	$usersex = $_POST['usersex'];
+	//$skinid = $_GET['skinid'];
+	//$usersex = $_GET['usersex'];
+	
+	$query = sprintf("select s.skinNum, s.head, s.forearm1, s.arm1, s.body, s.forearm2, s.arm2, s.legs FROM Skins as s WHERE s.skinNum = %d AND s.sex = '%s'", $skinid, $usersex);
+	$result = mysql_query($query, $database->connection);
+	$row = mysql_fetch_object($result);
+	$skinNum = $row->skinNum;
+	$head = $row->head;
+	$forearm1 = $row->forearm1;
+	$arm1 = $row->arm1;
+	$body = $row->body;
+	$forearm2 = $row->forearm2;
+	$arm2 = $row->arm2;
+	$legs = $row->legs;
+	
+	$return .= "skinNum=$skinNum&head=$head&forearm1=$forearm1&arm1=$arm1&body=$body&forearm2=$forearm2&arm2=$arm2&legs=$legs&";
+	
+	echo $return;
+	
+?>

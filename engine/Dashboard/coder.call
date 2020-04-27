@@ -1,0 +1,38 @@
+<?php
+	header('Content-Type: text/xml');
+
+	function checkDir($dir, $location) {
+		$handle = opendir($dir);
+		while(false !== ($file = readdir($handle))) {
+			if($file != "." && $file != ".."){
+				echo "<node label='$file' location='$location/$file'>";
+				if(is_dir($file)){
+					$currentDir = $dir."/".$file;
+					checkDir($currentDir, $file);
+				}
+				echo "</node>";
+			}
+		}
+		closedir($handle);
+	}
+?>
+<node label="Server">
+<?php
+
+	$rootDir = "../../";
+
+	if($handle = opendir($rootDir)) {
+		while(false !== ($file = readdir($handle))) {
+			if($file != "." && $file != ".."){
+				echo "<node label='$file' location='$file'>";
+				if(is_dir($rootDir.$file)) {
+					$currentDir = $rootDir . $file;
+					checkDir($currentDir, $file);
+				}
+				echo "</node>";
+			}
+		}
+		closedir($handle);
+	}
+?>
+</node>

@@ -1,0 +1,123 @@
+<?php
+	include_once("../../../engine/Core.php");
+	
+	$addr = $_SERVER['HTTP_REFERER'];
+	
+	$addrArr = explode('/', $addr);
+	$domain = $addrArr[2];
+	
+	if($domain != "192.168.1.103") {
+		//die();
+	}
+	
+	$songID = $_POST['songID'];
+	$type = $_POST['type'];
+	
+	if(!$session->user) {
+		echo "Don't be evil";
+		die();
+	}
+	
+	$userID = $session->user;
+	
+	$song = '';
+	$file = '';
+	$token = '';
+	
+	$error = 0;
+	$msg = '';
+	
+	if($type == "munniez") {
+		$query = sprintf("SELECT s.name, s.song, u.munniez as 'umunniez', s.munniez as 'smunniez' FROM Users as u JOIN Songs as s WHERE u.userID = %d AND s.songID = %d", $userID, $songID);
+		$result = mysql_query($query, $database->connection);
+		$row = mysql_fetch_object($result);
+		$umunniez = $row->umunniez;
+		$smunniez = $row->smunniez;
+		$song = $row->name;
+		$file = $row->song;
+		
+		if($umunniez < $smunniez) {
+			$error = 1;
+			$msg = "Sorry, but you don't have enough munniez to purchase \"$song\". Your current munniez balance is $umunniez and the song costs $smunniez. Try earning some more munniez by exploring and playing on the site.";
+		} else {
+			$newMunniez = $umunniez - $smunniez;
+			$query = sprintf("UPDATE Users SET munniez = %d WHERE userID = %d", $newMunniez, $userID);
+			$result = mysql_query($query, $database->connection);
+			$msg = "Thank you! You have successfully purchased \"$song\". A download link has been sent to your account inbox for your access. Remember, you can only download the song once! Thanks again!";
+		}
+		
+		$token = addDownload($userID);
+		
+	} elseif($type == "credits") {
+		$query = sprintf("SELECT s.name, s.song, u.credits as 'ucredits', s.credits as 'scredits' FROM Users as u JOIN Songs as s WHERE u.userID = %d AND s.songID = %d", $userID, $songID);
+		$result = mysql_query($query, $database->connection);
+		$row = mysql_fetch_object($result);
+		$ucredits = $row->ucredits;
+		$scredits = $row->scredits;
+		$song = $row->name;
+		$file = $row->song;
+		
+		if($ucredits < $scredits) {
+			$error = 1;
+			$msg = "Sorry, but you don't have enough credits to purchase \"$song\". Your current credits balance is $ucredits and the song costs $scredits. You can purchase more credits by going to the Podunkton Bank!";
+		} else {
+			$newCredits = $ucredits - $scredits;
+			$query = sprintf("UPDATE Users SET credits = %d WHERE userID = %d", $newCredits, $userID);
+			$result = mysql_query($query, $database->connection);
+			$msg = "Thank you! You have successfully purchased \"$song\". A download link has been sent to your account inbox for your access. Remember, you can only download the song once! Thanks again!";
+		}
+		
+		$token = addDownload($userID);
+		
+	} else {
+		$query = sprintf("SELECT s.name, s.song FROM Songs as s WHERE s.songID = %d", $songID);
+		$result = mysql_query($query, $database->connection);
+		$row = mysql_fetch_object($result);
+		$song = $row->name;
+		$file = $row->song;
+		
+		$msg = "Thanks for downloading \"$song\". A download link has been sent to your account inbox for your access. Share this song as much as you like! Thanks again!";
+		
+		$token = addDownload($userID);
+		
+	}
+	
+	if($error == 0) {
+		$subject = "Song Purchase: $song";
+		$clean_html = "Thank you for your interest in our music! We hope you enjoy it! Click the link below to download your song and remember you can only download it once.<br/><br/><a class=\'blue\' href=\'/content/audio/songs/download.call?token=$token&file=$file\'>Click here to download $song</a>";
+		
+		$query = sprintf("INSERT INTO Messages(subject, message) VALUES('$subject', '$clean_html')");
+		echo $query."<br/>";
+		$result = mysql_query($query, $database->connection);
+		$mid = mysql_insert_id();
+		$query = sprintf("INSERT INTO Inbox(reciever, sender, mid, isread, postdate) VALUES($userID, 1, $mid, 0, NOW())");
+		echo $query."<br/>";
+		$result = mysql_query($query, $database->connection);
+	}
+	
+	echo "error=$error&msg=$msg";
+	
+	function addDownload($user) {
+		global $database;
+		
+		$code = '';
+		srand(time());
+		for($i=0; $i<32; $i++) {
+			$type = rand(1, 3);
+			switch(rand(1, 3)) {
+				case 1:
+					$code .= chr(rand(48, 57));
+					break;
+				case 2:
+					$code .= chr(rand(65, 90));
+					break;
+				case 3:
+					$code .= chr(rand(97, 122));
+					break;
+			}
+		}
+		$query = sprintf("INSERT INTO Download_Tokens(token, userID) VALUES('%s', %d)", $code, $user);
+		$result = mysql_query($query, $database->connection);
+		return $code;
+	}
+?>

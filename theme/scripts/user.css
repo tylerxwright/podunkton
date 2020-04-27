@@ -1,0 +1,662 @@
+a.blue {
+	color: #647DB8;
+}
+
+a.blue:hover {
+	color: #3E507E;
+	text-decoration: underline;
+}
+
+a.blue2 {
+	color: #616E8F;
+}
+
+a.blue2:hover {
+	color: #8697C1;
+	text-decoration: underline;
+}
+
+a.grey {
+	color: #8D8D8D;
+}
+
+a.grey:hover {
+	color: #333;
+	text-decoration: underline;
+}
+
+a.grey2 {
+	color: #f2f2f2;
+}
+
+a.grey2:hover {
+	color: #000;
+}
+
+tr.user {
+	line-height: 10pt;
+}
+
+td.user {
+	font-size: 8pt;
+	padding: 0px;
+}
+
+th.user {
+	font-size: 10pt;
+	font-weight: bold;
+	color: #000;
+	padding-bottom: 4px;
+}
+
+span.blue {
+	color: #647DB8;
+}
+
+span.grey {
+	color: #58678A;
+	
+}
+
+div#user_left {
+	width: 235px;
+	float: left;
+}
+
+div.user_middle {
+	width: 545px;
+	float: left;
+	margin-left: 8px;
+
+}
+
+.ie .user_middle {     /* ie fix*/
+	width: 545px;
+	float: left;
+	margin-left: 8px;
+	margin-top: -6px;
+
+}
+
+div#user_right {
+	width: 130px;
+	float: left;
+}
+
+div.user_title {
+	color: #fff;
+	padding-top: 4px;
+	font-size: 10pt;
+	font-weight: bold;
+	text-align: left;
+	padding-left: 5px;
+	float: left;
+}
+
+div.user_box {
+	width: 233px;
+	padding: 1px;
+	border: solid 1px #828282;
+}
+
+div.user_box_content {
+	width: 225px;
+	font-size: 8pt;
+	padding: 5px 4px 5px 4px;
+	background-image: url("/theme/images/desc_fade.png");
+	background-repeat: repeat-x;
+}
+
+div.default_icon {
+	width: 15px;
+	height: 15px;
+	background-color: #777;
+	float: left;
+}
+
+div.default_icon2 {
+	width: 15px;
+	height: 15px;
+	margin-right: 8px;
+	margin-bottom: 5px;
+	background-color: #777;
+	float: left;
+}
+
+div.user_contact_link {
+	padding-left: 10px;
+	font-size: 10pt;
+	line-height: 10pt;
+	float: left;
+}
+
+div.user_contact_row {
+	margin-top: 10px;
+	margin-left: 5px;
+}
+
+div#user_num_friends {
+	width: 225px;
+	height: 10pt;
+	font-size: 9pt;
+	padding: 1px 5px 2px 5px;
+	border-bottom: solid 1px #828282;
+	text-align: center;
+}
+
+div.user_friend_selector {
+	float: left;
+	width: 75px;
+	height: 75px;
+	padding-top: 10px;
+	text-align: center;
+}
+
+div.user_friend_icon {
+	width: 35px;
+	height: 35px;
+	margin-left: 19px;
+	margin-right: 19px;
+	border: solid 1px #828282;
+}
+
+div.user_friend_link {
+	padding-top: 5px;
+	font-size: 10pt;
+	line-height: 10pt;
+	color: #647DB8;
+}
+
+div#user_friend_all {
+	font-size: 10pt;
+	line-height: 10pt;
+	padding-right: 8px;
+	width: 225px;
+	text-align: right;
+}
+
+div.user_badges_small {
+	font-size: 9pt;
+	line-height: 9pt;
+	padding: 1px 5px 2px 5px; 
+}
+
+div.user_badges_left {
+	float: left;
+}
+
+div.user_badges_right {
+	float: right;
+	color: #647DB8;
+}
+
+div.user_award {
+	width: 20px;
+	height: 20px;
+	margin-top: 6px;
+	border: solid 1px #828282;
+	float: left;
+}
+
+div.user_award_right {
+	width: 198px;
+	padding-top: 3px;
+	padding-left: 5px;
+	float: left;
+	line-height: 20pt;
+	font-size: 9pt;
+	color: #333;
+}
+
+div.user_item {
+	margin: 6px 0px 5px 5px;
+	width: 33px;
+	height: 33px;
+	border: solid 1px #828282;
+	float: left;
+}
+
+div.user_item_right {
+	margin: 6px 0px 5px 5px;
+	width: 170px;
+	padding-top: 3px;
+	padding-left: 10px;
+	float: left;
+	line-height: 9pt;
+	font-size: 9pt;
+	color: #333;
+}
+
+div.user_general_top {
+	font-size: 9pt;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: center;
+	border-bottom: solid 1px #828282;
+	background-image: url("/theme/images/desc_fade.png");
+	background-repeat: repeat-x;
+}
+
+div.user_activity_date {
+	font-size: 9pt;
+	font-weight: bold;
+	margin-left: 8px;
+	margin-right: 8px;
+	padding-top: 5px;
+	padding-bottom: 3px;
+	margin-bottom: 8px;
+	border-bottom: solid 1px #828282;
+}
+
+div.user_activity_row {
+	width: 490px;
+	float: left;
+	border-bottom: solid 1px #647DB8;
+	font-size: 9pt;
+	padding-bottom: 4px;
+	margin-bottom: 8px;
+}
+
+div.user_activity_left {
+	float: left;
+}
+
+div.user_activity_right {
+	float: right;
+}
+
+div.user_comment_left {
+	width: 40px;
+	float: left;
+	padding-right: 8px;
+}
+
+div.user_comment_icon {
+	width: 35px;
+	height: 35px;
+	margin-left: 3px;
+	margin-right: 0px;
+	border: solid 1px #828282;
+}
+
+div.user_comment_right {
+	width: 480px;
+	float: left;
+}
+
+div.user_comment_top {
+	width: 100%;
+	font-size: 9pt;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border-top: solid 1px #000;
+	border-bottom: solid 1px #CDDAF9;
+}
+
+div.user_comment_bot {
+	width: 100%;
+	font-size: 9pt;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+div.user_comment_actions {
+	font-size: 8pt;
+	text-align: right;
+	margin-bottom: 10px;
+}
+
+div.user_comment_bottom {
+	width: 100%;
+	font-size: 9pt;
+	border-top: solid 1px #647DB8;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: right;
+}
+
+div.user_tower_ad {
+	width: 194px;
+	background-image: url("/theme/images/tower_ad_background.png");
+	background-repeat: repeat-y;
+	border: solid 1px #757575;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	text-align: center;
+}
+
+div#user_toolbox {
+	width: 229px;
+	border: solid 1px #828282;
+	padding: 3px;
+}
+
+div.user_toolbox_title {
+	width: 220px;
+	height: 16px;
+	padding: 3px 5px 0px 5px;
+	margin-bottom: 5px;
+	color: #000;
+	font-size: 8pt;
+	line-height: 8pt;
+	font-weight: bold;
+	background-color: #BDC6DD;
+}
+
+div.user_toolbox_row {
+	font-size: 9pt;
+	padding-top: 1px;
+}
+
+div.user_toolbox_row_left {
+	padding-left: 3px;
+	padding-right: 16px;
+	float: left;
+}
+
+div.user_toolbox_row_right {
+	float: left;
+}
+
+div.user_letter_icon {
+	width: 13px;
+	height: 12px;
+	background-image: url("/theme/images/letter_icon.png");
+}
+
+div.user_toolbox_notes {
+	padding-left: 8px;
+	padding-right: 8px;
+	font-size: 8pt;
+	color: #595959;
+}
+
+div#user_edit_top {
+	width: 792px;
+	padding-bottom: 1px;
+	margin-bottom: 8px;
+	font-size: 8pt;
+	font-weight: bold;
+	border-bottom: solid 1px #CDDAF9;
+}
+
+div#user_edit_left {
+	width: 588px;
+	margin-right: 8px;
+	float: left;
+}
+
+
+
+input.uedit {
+	width: 250px;
+}
+
+div.hr {
+	width: 100%;
+	height: 1px;
+	margin-top: 4px;
+	margin-bottom: 10px;
+	border-bottom: solid 1px #828282;
+}
+
+td.head {
+	font-weight: bold;
+}
+
+textarea.uedit {
+	width: 250px;
+	height: 80px;
+}
+
+div#userTabs {
+	margin-left: 6px;
+	float: left;
+	width: 547px;
+}
+
+div.tab {
+	width: 89px;
+	height: 24px;
+	margin-left: 2px;
+	float: left;
+	cursor: pointer;
+}
+
+div#tab1 {
+	width: 89px;
+	height: 24px;
+	background-image: url('/theme/images/user/genTabOff.png');
+}
+
+div#tab2 {
+	width: 89px;
+	height: 24px;
+	background-image: url(/theme/images/user/actTabOff.png);
+}
+
+div#tab3 {
+	width: 89px;
+	height: 24px;
+	background-image: url(/theme/images/user/comTabOff.png);
+}
+
+div#tab4 {
+	width: 89px;
+	height: 24px;
+	background-image: url(/theme/images/user/badgTabOff.png);
+}
+
+div#tab5 {
+	width: 89px;
+	height: 24px;
+	background-image: url(/theme/images/user/statTabOff.png);
+}
+
+div#tab6 {
+	width: 89px;
+	height: 24px;
+	background-image: url(/theme/images/user/friendTabOff.png);
+}
+
+div.site_box_user {
+	background-color:#FFFFFF;
+	border: solid 1px #7E7E7E;
+	overflow: hidden;
+	width: 100%;
+	min-height: 435px;
+	height: expression( this.scrollHeight < 436 ? "435px" : "auto" ); /* sets min-height for IE */
+}
+
+div.site_box_holder {
+	width: 100%;
+	overflow: hidden;
+	background-color: #fff;
+}
+
+a.edit {
+	font-size: 9pt;
+	color: #ff9900;
+}
+
+a.edit:hover {
+	font-size: 9pt;
+	color: #828282;
+}
+
+div.shops_title {
+	color: #fff;
+	padding-top: 4px;
+	font-size: 10pt;
+	font-weight: bold;
+	text-align: left;
+	padding-left: 15px;
+	float: left;
+}
+
+
+/*------------------*/
+/*---BADGES CSS-----*/
+
+div#badge_achievement_holder {
+	width: 98%;
+	padding-top: 8px;
+	margin: 0px auto;
+}
+
+div.badge_box {
+	width: 33px;
+	height: 33px;
+	margin-right: 7px;
+	margin-bottom: 7px;
+	float: left;
+}
+
+div.badge_headers {
+	color: #484848;
+	font-size: 8pt;
+	font-weight: bold;
+	border-bottom: 1px solid #828282;
+	width: 98%;
+}
+
+div#detailsBox {
+	width: 300px;
+	min-height: 150px;
+	height: auto;
+	position: absolute;
+	background-color: #F5F7FF;
+	border: solid 1px #333;
+	display: none;
+}
+
+div#statsContent {
+	padding-top: 10px;
+	margin: 0px auto;
+	width: 500px;
+}
+
+div#bigExpBar {
+	padding-top: 3px;
+	width: 500px;
+}
+
+div#bigExpBarTop {
+	width: 100%;
+	height: 30px;
+}
+
+div#bigExpBase {
+	width: 100%;
+	height: 30px;
+	background-image: url(/theme/images/user/expTopBack.png);
+}
+
+div#bigExpTop {
+	position: relative;
+	width: 50%;
+	height: 30px;
+	top: -30px;
+	background-image: url(/theme/images/user/expTop.png);
+}
+
+div#bigGoodTop {
+	position: relative;
+	width: 50%;
+	height: 30px;
+	top: -30px;
+	background-image: url(/theme/images/user/goodTop.png);
+}
+
+div#bigEvilTop {
+	position: relative;
+	width: 50%;
+	height: 30px;
+	top: -30px;
+	background-image: url(/theme/images/user/evilTop.png);
+}
+
+div#bigExpBarBot {
+	width: 100%;
+	height: 30px;
+}
+
+div#bigExpBaseReflection {
+	width: 100%;
+	height: 30px;
+	background-image: url(/theme/images/user/expBotBack.png);
+}
+
+.ie6 div#bigExpBaseReflection {
+	width: 100%;
+	height: -60px;
+	background-image: url(/theme/images/user/expBotBack2.png);
+}
+
+div#bigExpBotReflection {
+	position: relative;
+	width: 50%;
+	height: 30px;
+	top: -30px;
+	background-image: url(/theme/images/user/expBot.png);
+}
+
+.ie6 div#bigExpBotReflection {
+	position: relative;
+	width: 50%;
+	height: 30px;
+	top: -60px;
+	background-image: url(/theme/images/user/expBot.png);
+}
+
+div#bigGoodBotReflection {
+	position: relative;
+	width: 50%;
+	height: 30px;
+	top: -30px;
+	background-image: url(/theme/images/user/goodBot.png);
+}
+
+.ie6 div#bigGoodBotReflection {
+	position: relative;
+	width: 50%;
+	height: 30px;
+	top: -60px;
+	background-image: url(/theme/images/user/goodBot.png);
+}
+
+div#bigEvilBotReflection {
+	position: relative;
+	width: 50%;
+	height: 30px;
+	top: -30px;
+	background-image: url(/theme/images/user/evilBot.png);
+}
+
+.ie6 div#bigEvilBotReflection {
+	position: relative;
+	width: 50%;
+	height: 30px;
+	top: -60px;
+	background-image: url(/theme/images/user/evilBot.png);
+}
+
+span.statsText {
+	font-size: 14pt;
+	color: #555;
+}
+
+span.statsExpText {
+	font-size: 14pt;
+	color: #444;
+}
+
+td.statsTableLeft {
+	font-size: 14pt;
+	color: #555;
+}
+
+td.statsTableRight {
+	font-size: 14pt;
+	color: #444;
+}

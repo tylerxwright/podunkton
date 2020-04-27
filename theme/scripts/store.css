@@ -1,0 +1,85 @@
+div#storePage 
+{
+	width: 100%;
+	margin-left: 20px;
+	float: center;
+}
+
+div#storeTop
+{
+	background-image: url("/theme/images/store/top_intro.png");
+	background-repeat: no-repeat;
+	width: 777px;
+	height: 174px;
+	padding: 0px;
+	margin: 0px;
+}
+
+div#storeMiddle
+{
+	width: 777px;
+	margin-top: 2px;
+}
+
+div#store_middle_left
+{
+	background-image: url("/theme/images/store/oct_2008_monthly.png");
+	background-repeat: no-repeat;
+	width: 375px;
+	height: 191px;
+	margin-right: 6px;
+	float: left;
+}
+
+div#store_middle_right
+{
+	background-image: url("/theme/images/store/due_credit.png");
+	background-repeat: no-repeat;
+	width: 369px;
+	height: 191px;
+	float: left;
+}
+
+div#storeBottom
+{
+	background-image: url("/theme/images/store/credits_window.png");
+	background-repeat: no-repeat;
+	width: 777px;
+	height: 188px;
+	margin-top: 6px;
+}
+
+div#paypal_link_button
+{
+	width: 74px;
+	height: 32px;
+	padding-top: 138px;
+	margin-left: 245px;
+}
+
+div#buyNow_button01
+{
+	width: 105px;
+	height: 29px;
+	margin-left: 265px;
+	padding-top: 155px;
+}
+
+
+div.buyNow_button02
+{
+	width: 95px;
+	height: 27px;
+	margin-left: 0px;
+	padding-top: 0px;
+	float: left;
+}
+
+div#store_ad {
+	width: 738px;
+	height: 93px;
+	padding-top: 3px;
+	padding-left: 10px;
+	background-image: url("/theme/images/forums_ad2_back.png");
+	border: solid 1px #7E7E7E;
+}

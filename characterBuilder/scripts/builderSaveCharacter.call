@@ -1,0 +1,64 @@
+<?php
+	
+	include_once("../../engine/Core.php");
+	
+	$items = $_POST['items'];
+	
+	if(get_magic_quotes_gpc()){
+		$items = stripslashes($items);
+	}
+	
+	$items = unserialize(urldecode($items));
+	
+	$items = array_reverse($items);
+
+	reset($items);
+	
+	// Delete this users items
+	//$query = sprintf("DELETE FROM Users_has_Items WHERE userID_FK = %d", current($items));
+	//$result = mysql_query($query, $database->connection);
+	
+	$all = "sadf";
+	$querys = "";
+	
+	while ($item = current($items)) {
+		$uiID = current($items);
+		next($items);
+		$userID_FK = current($items);
+		next($items);
+		$itemID_FK = current($items);
+		next($items);
+		$equipped = current($items);
+		next($items);
+		$slotID = current($items);
+		next($items);
+		$swfID = current($items);
+		next($items);
+		$maxLevel = current($items);
+		next($items);
+		$equipDate = current($items);
+		next($items);
+		$equipDuration = current($items);
+		next($items);
+		$equippedLevel = current($items);
+		next($items);
+		
+		//$query = sprintf("INSERT INTO Users_has_Items(userID_FK, itemID_FK, equipped, slotID, swfID, maxLevel, equipDate, equipDuration) VALUES(%d, %d, %d, %d, %d, %d, %d, %d)", $userID_FK, $itemID_FK, $equipped, $slotID, $swfID, $maxLevel, $equipDate, $equipDuration);
+		//$result = mysql_query($query, $database->connection);
+		$query2 = sprintf("SELECT trading FROM Users_has_Items WHERE id = %d AND userID_FK = %d", $uiID, $userID_FK);
+		$result2 = mysql_query($query2, $database->connection);
+		$countRows = mysql_num_rows($result2);
+		
+		//$querys .= $countRows;
+		
+		if($countRows == 1) {
+			$query = sprintf("UPDATE Users_has_Items SET userID_FK=%d, itemID_FK=%d, equipped=%d, equippedLevel=%d, slotID=%d, swfID=%d, maxLevel=%d, equipDate='%s', equipDuration=%d WHERE id=%d", $userID_FK, $itemID_FK, $equipped, $equippedLevel, $slotID, $swfID, $maxLevel, $equipDate, $equipDuration, $uiID);
+			$result = mysql_query($query, $database->connection);
+		}
+	}
+	
+	reset($items);
+	echo "test=".$querys;
+	//echo "test=asdf";
+	
+?>

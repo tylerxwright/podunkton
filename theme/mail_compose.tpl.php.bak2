@@ -1,0 +1,156 @@
+<?php
+	global $core;
+	global $database;
+	global $session;
+
+if($session->user){
+	
+	$result = $database->db_query("SELECT name, userID FROM Users WHERE userID != ".$session->user);
+?>
+<script src="/theme/scripts/dmsAutoComplete.js"></script>
+<script type="text/javascript">
+	
+	var myHolder = new Array();
+	
+	function checkEnter(e){
+		var characterCode;
+		
+		if(e && e.which){ //if which property of event object is supported (NN4)
+			e = e;
+			characterCode = e.which; //character code is contained in NN4's which property
+		} else {
+			e = event;
+			characterCode = e.keyCode; //character code is contained in IE's keyCode property
+		}
+		
+		if(characterCode == 13){ //if generated character code is equal to ascii 13 (if enter key)
+			add();
+		}
+	}
+	
+	function add(){
+		var name = document.getElementById("to").value;
+		var holder = document.getElementById("rightMIn");
+		
+		if(name != ''){
+			myHolder.push(name);
+			holder.innerHTML += "<div class='messageUserBox'><div class='messageUserLeft'>"+name+"</div><div class='messageUserRight' onclick='deleteR("+(myHolder.length-1)+");'></div><div style='clear: both;'></div>";
+			document.getElementById("rightMTop").innerHTML = "Recipients ("+myHolder.length+")";
+			document.getElementById("to").value = '';
+			document.getElementById("to").focus();
+		}
+		
+	}
+	
+	function deleteR(i){
+		var tmpArr = new Array();
+		var holder = document.getElementById("rightMIn");
+		holder.innerHTML = '';
+		if(i == 0){
+			myHolder.shift();
+		} else if(i<myHolder.length-1){
+			for(j=0; j<i; j++){
+				tmpArr.push(myHolder.shift());
+			}
+			myHolder.shift();
+			myHolder = tmpArr.concat(myHolder);
+		} else {
+			myHolder.pop();
+		}
+		for(j=0; j<myHolder.length; j++){
+			holder.innerHTML += "<div class='messageUserBox'><div class='messageUserLeft'>"+myHolder[j]+"</div><div class='messageUserRight' onclick='deleteR("+j+");'></div><div style='clear: both;'></div>";
+		}
+		document.getElementById("rightMTop").innerHTML = "Recipients ("+myHolder.length+")";
+	}
+</script>
+<style type="text/css">
+div#leftMessage {
+	width: 600px;
+	float: left;
+}
+div#rightMessage {
+	width: 191px;
+	height: 219px;
+	float: left;
+	background-color: #f5f5f5;
+	border: solid 1px #aaa;
+}
+div#rightMTop {
+	width: 191px;
+	height: 20px;
+	background-color: #999;
+	border-bottom: solid 1px #aaa;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+}
+div#rightMIn {
+	width: 191px;
+	height: 196px;
+	overflow-y: scroll;
+}
+input.toText {
+	width: 378px;
+}
+input.otherInputs {
+	width: 500px;
+}
+textarea.otherInputs {
+	width: 500px;
+}
+div.messageUserBox {
+	width: 165px;
+	height: 16px;
+	margin: 2px 0px 2px 4px;
+}
+div.messageUserLeft {
+	float: left;
+}
+div.messageUserRight {
+	float: right;
+	width: 16px;
+	height: 16px;
+	background-image: url("/theme/images/icons/delete.png");
+	cursor: pointer;
+}
+#acDiv{ border: 1px solid #9F9F9F; background-color:#F3F3F3; padding: 3px; font-size:10px; font-family:Verdana, Arial, Helvetica, sans-serif; color:#000000; display:none; position:absolute; z-index:999;}
+#acDiv UL{ list-style:none; margin: 0; padding: 0; } 
+#acDiv UL LI{ display:block;}
+#acDiv A{ color:#000000; text-decoration:none; }
+#acDiv A:hover{ color:#000000; }
+#acDiv LI.selected{ background-color:#7d95ae; color:#000000; }
+</style>
+<b>Write a message</b><br/><br/>
+<div id="leftMessage">
+	<div style="height: 20px;"></div>
+	<form action="/process/addMessage" name="sendMsg" method="POST">
+		<table border="0">
+			<tr><td>To:</td><td>
+				<input class="toText" id="to" type="text" name="subject" onkeydown="checkEnter(event);" />
+				<div id="acDiv"></div>
+			</td><td><input type="button" value="add to recipients" onclick="add();"/></td></tr>
+			<tr><td>Subject:</td><td colspan="2"><input class="otherInputs" type="text" name="subject"/></td></tr>
+			<tr><td valign="top">Message:</td><td colspan="2"><textarea class="otherInputs" name="message" rows="7"></textarea></td></tr>
+			<tr><td></td><td colspan="2"><input type="button" name="submit" value="Send Message" onClick="sendMsg.submit();"/></td></tr>
+		</table>
+	</form>
+</div>
+<div id="rightMessage">
+	<div id="rightMTop">Recipients (0)</div>
+	<div id="rightMIn"></div>
+</div>
+<div style="clear: both;"></div>
+<script>
+var AC = new dmsAutoComplete('toText','acDiv');
+
+AC.ajaxTarget = '/theme/scripts/getUsers.call';
+AC.chooseFunc = function(id,label){
+	alert(id+'-'+label);
+}
+
+</script>
+<?php
+} else  {
+
+
+}

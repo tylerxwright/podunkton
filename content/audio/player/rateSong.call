@@ -1,0 +1,34 @@
+<?php
+	
+	include_once("../../../engine/Core.php");
+	
+	global $session;
+	
+	$userID = $_POST['userID'];
+	$songID = $_POST['songID'];
+	$rating = $_POST['rating'];
+	
+	if($userID AND $rating != 0) {
+		$query = sprintf("UPDATE Songs SET rating = rating + %d, numRaters = numRaters + 1 WHERE songID = %d", $rating, $songID);
+		$rateResult = mysql_query($query, $database->connection);
+		
+		$query = sprintf("INSERT INTO Songs_has_Users(songID, userID) VALUES(%d, %d)", $songID, $userID);
+		$addRater = mysql_query($query, $database->connection);
+	}
+	
+	$query = sprintf("SELECT rating, numRaters FROM Songs WHERE songID = %d", $songID);
+	$rateResult = mysql_query($query, $database->connection);
+	$row = mysql_fetch_object($rateResult);
+	
+	$rowRating = $row->rating;
+	$numRaters = $row->numRaters;
+	
+	if($numRaters == 0) {
+		$average = 0;
+	} else {
+		$average = sprintf("%01.2f", $rowRating/$numRaters);
+	}
+	
+	echo "rating=$average";
+	
+?>

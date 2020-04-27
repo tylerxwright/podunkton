@@ -1,0 +1,1020 @@
+input.adminInput {
+	width: 400px;
+}
+.adminInput2 {
+	width: 200px;
+}
+textarea.adminTextArea {
+	width: 400px;
+	height: 150px;
+}
+h2 {
+	color: #333;
+	font-size: 16pt;
+}
+
+div#coverArt {
+	border: solid 1px #333;
+	width: 114px;
+	height: 114px;
+	float: left;
+	margin-right: 10px;
+}
+div#audioTopRight {
+	float: left;
+}
+.albumInput3 {
+	width: 300px;
+}
+
+td.alabel {
+	font-weight: bold;
+}
+div.genreBar {
+	width: 100%;
+	height: 20px;
+	background-color: #647DB8;
+	border: solid 1px #000;
+}
+div.genreName {
+	float: left;
+	font-weight: bold;
+	color: #fff;
+	padding-left: 5px;
+}
+div.genreRight {
+	float: right;
+}
+div.slideBtn {
+	width: 15px;
+	height: 15px;
+	margin-right: 8px;
+	margin-top: 2px;
+	float: left;
+	background-image: url('/theme/images/icons/arrowDown.png');
+	cursor: pointer;
+}
+div.deleteBtn {
+	width: 15px;
+	height: 15px;
+	margin-right: 3px;
+	margin-top: 2px;
+	float: left;
+	background-image: url('/theme/images/icons/delete2.png');
+	cursor: pointer;
+}
+div.editBtn {
+	width: 15px;
+	height: 15px;
+	margin-right: 8px;
+	margin-top: 2px;
+	float: left;
+	background-image: url('/theme/images/icons/edit.png');
+	cursor: pointer;
+	border-left: solid 1px #555;
+	border-bottom: solid 1px #555;
+}
+div.genreDesc {
+	display: none;
+	clear: both;
+	font-size: 9pt;
+}
+a.white {
+	color: #fff;
+	margin-left: 5px;
+	font-weight: bold;
+}
+div.albumHolder {
+	padding: 5px;
+	height: auto;
+	border-left: solid 1px #333;
+	border-right: solid 1px #333;
+	border-bottom: solid 1px #333;
+}
+table#songHolder {
+	width: 100%;
+	border: solid 1px #333;
+}
+tr.songRow {
+	color: #000;
+}
+tr.songRow:hover {
+	color: #fff;
+}
+td.songItem {
+	margin: 0px;
+	padding: 2px;
+	border-top: solid 1px #333;
+	border-right: solid 1px #333;
+	font-size: 8pt;
+}
+div.songItem:hover {
+	background-color: #fff;
+}
+th {
+	font-size: 8pt;
+	border-right: solid 1px #333;
+	margin-left: 3px;
+	margin-right: 3px;
+}
+tr.headerRow {
+	background-color: #ddd;
+}
+
+div.genreBar {
+	width: 100%;
+	height: 20px;
+	background-color: #647DB8;
+	border: solid 1px #000;
+}
+div.genreName {
+	float: left;
+}
+div.genreRight {
+	float: right;
+}
+div.slideBtn {
+	width: 15px;
+	height: 15px;
+	margin-right: 8px;
+	margin-top: 2px;
+	float: left;
+	background-image: url('/theme/images/icons/arrowDown.png');
+	cursor: pointer;
+}
+div.deleteBtn {
+	width: 15px;
+	height: 15px;
+	margin-right: 3px;
+	margin-top: 2px;
+	float: left;
+	background-image: url('/theme/images/icons/delete2.png');
+	cursor: pointer;
+}
+div.editBtn {
+	width: 15px;
+	height: 15px;
+	margin-right: 8px;
+	margin-top: 2px;
+	float: left;
+	background-image: url('/theme/images/icons/edit.png');
+	cursor: pointer;
+	border-left: solid 1px #555;
+	border-bottom: solid 1px #555;
+}
+div.genreDesc {
+	display: none;
+	clear: both;
+	font-size: 9pt;
+}
+a.white {
+	color: #fff;
+	margin-left: 5px;
+	font-weight: bold;
+}
+div.albumHolder {
+	padding: 5px;
+	height: auto;
+	border-left: solid 1px #333;
+	border-right: solid 1px #333;
+	border-bottom: solid 1px #333;
+}
+div.album {
+	width: 80px;
+	height: auto;
+	float: left;
+	padding: 5px;
+	overflow: hidden;
+	text-align: center;
+}
+div.album:hover {
+	background-color: #D1DDF9;
+}
+div.albumArt {
+	border: solid 1px #333;
+	width: 60px;
+	height: 60px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+div.albumEdit {
+	width: 60px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+span.albumName {
+	font-size: 8pt;
+}
+div.membersArea {
+	border-left: solid 1px #333;
+	border-right: solid 1px #333;
+	border-bottom: solid 1px #333;
+	padding: 5px;
+}
+tr.memberRow:hover {
+	background-color: #D1DDF9;
+}
+div.biography {
+	padding: 5px;
+	height: auto;
+	border-left: solid 1px #333;
+	border-right: solid 1px #333;
+	border-bottom: solid 1px #333; 
+}
+
+/* */
+div.genreBar {
+	width: 100%;
+	height: 20px;
+	background-color: #647DB8;
+	border: solid 1px #000;
+}
+div.genreName {
+	float: left;
+}
+div.genreRight {
+	float: right;
+}
+div.slideBtn {
+	width: 15px;
+	height: 15px;
+	margin-right: 8px;
+	margin-top: 2px;
+	float: left;
+	background-image: url('/theme/images/icons/arrowDown.png');
+	cursor: pointer;
+}
+div.deleteBtn {
+	width: 15px;
+	height: 15px;
+	margin-right: 3px;
+	margin-top: 2px;
+	float: left;
+	background-image: url('/theme/images/icons/delete2.png');
+	cursor: pointer;
+}
+div.editBtn {
+	width: 15px;
+	height: 15px;
+	margin-right: 8px;
+	margin-top: 2px;
+	float: left;
+	background-image: url('/theme/images/icons/edit.png');
+	cursor: pointer;
+}
+div.genreDesc {
+	display: none;
+	clear: both;
+	font-size: 9pt;
+	padding-bottom: 5px;
+}
+a.white {
+	color: #fff;
+	margin-left: 5px;
+	font-weight: bold;
+}
+
+div.genreBar {
+	width: 100%;
+	height: 20px;
+	background-color: #647DB8;
+	border: solid 1px #000;
+}
+div.genreName {
+	float: left;
+}
+div.genreRight {
+	float: right;
+}
+div.deleteBtn {
+	width: 15px;
+	height: 15px;
+	margin-right: 3px;
+	margin-top: 2px;
+	float: left;
+	background-image: url('/theme/images/icons/delete2.png');
+	cursor: pointer;
+}
+div.editBtn {
+	width: 15px;
+	height: 15px;
+	margin-right: 8px;
+	margin-top: 2px;
+	float: left;
+	background-image: url('/theme/images/icons/edit.png');
+	cursor: pointer;
+}
+a.white {
+	color: #fff;
+	margin-left: 5px;
+	font-weight: bold;
+}
+
+div.genreBar {
+	width: 100%;
+	height: 20px;
+	background-color: #647DB8;
+	border: solid 1px #000;
+}
+div.genreName {
+	float: left;
+}
+div.genreRight {
+	float: right;
+}
+div.deleteBtn {
+	width: 15px;
+	height: 15px;
+	margin-right: 3px;
+	margin-top: 2px;
+	float: left;
+	background-image: url('/theme/images/icons/delete2.png');
+	cursor: pointer;
+}
+div.editBtn {
+	width: 15px;
+	height: 15px;
+	margin-right: 8px;
+	margin-top: 2px;
+	float: left;
+	background-image: url('/theme/images/icons/edit.png');
+	cursor: pointer;
+}
+a.white {
+	color: #fff;
+	margin-left: 5px;
+	font-weight: bold;
+}
+
+#adminMenu {
+	width: 100%; 
+	height: 20px; 
+	background-color: #DDD;
+	border: solid 1px #333;
+	margin-bottom: 10px;
+}
+.adminButton {
+	float: left;
+	/*padding-left: 5px;
+	padding-right: 5px;*/
+	border-right: solid 1px #333;
+	height: 100%;
+	font-weight: bold;
+}
+a.menuTxt {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+/* */
+
+a.click {
+	color: #0077ff;
+	text-decoration: underline;
+}
+
+a.click:hover {
+	color: #ff0000;
+	text-decoration: underline;
+}
+
+th {
+	font-weight: bold;
+}
+
+input.uploadBox
+{
+FONT-SIZE: 7px;
+WIDTH: auto;
+COLOR: #000000;
+FONT-FAMILY: Verdana, Arial, sans-serif;
+BACKGROUND-COLOR: #ffffff
+}
+
+select.selectMe {
+	font-size: 10pt;
+	width: 80px;
+}
+
+table.powerTable {
+	border: none;
+}
+
+span#warning {
+	color: #ff0000;
+	font-weight: bold;
+}
+
+/* */
+a.click {
+	color: #0077ff;
+	text-decoration: underline;
+}
+
+a.click:hover {
+	color: #ff0000;
+	text-decoration: underline;
+}
+
+th {
+	font-weight: bold;
+}
+
+input.uploadBox
+{
+FONT-SIZE: 7px;
+WIDTH: auto;
+COLOR: #000000;
+FONT-FAMILY: Verdana, Arial, sans-serif;
+BACKGROUND-COLOR: #ffffff
+}
+
+select.selectMe {
+	font-size: 10pt;
+	width: 80px;
+}
+
+table.powerTable {
+	border: none;
+}
+
+div.genreBar {
+	width: 100%;
+	height: 20px;
+	background-color: #647DB8;
+	border: solid 1px #000;
+}
+div.genreName {
+	float: left;
+}
+div.genreRight {
+	float: right;
+}
+div.slideBtn {
+	width: 15px;
+	height: 15px;
+	margin-right: 8px;
+	margin-top: 2px;
+	float: left;
+	background-image: url('/theme/images/icons/arrowDown.png');
+	cursor: pointer;
+}
+div.deleteBtn {
+	width: 15px;
+	height: 15px;
+	margin-right: 3px;
+	margin-top: 2px;
+	float: left;
+	background-image: url('/theme/images/icons/delete2.png');
+	cursor: pointer;
+}
+div.editBtn {
+	width: 15px;
+	height: 15px;
+	margin-right: 8px;
+	margin-top: 2px;
+	float: left;
+	background-image: url('/theme/images/icons/edit.png');
+	cursor: pointer;
+	border-left: solid 1px #555;
+	border-bottom: solid 1px #555;
+}
+div.genreDesc {
+	display: none;
+	clear: both;
+	font-size: 9pt;
+}
+a.white {
+	color: #fff;
+	margin-left: 5px;
+	font-weight: bold;
+}
+div.albumHolder {
+	padding: 5px;
+	height: auto;
+	border-left: solid 1px #333;
+	border-right: solid 1px #333;
+	border-bottom: solid 1px #333;
+}
+div.album {
+	width: 80px;
+	height: auto;
+	float: left;
+	padding: 5px;
+	overflow: hidden;
+	text-align: center;
+}
+div.album:hover {
+	background-color: #D1DDF9;
+}
+div.albumArt {
+	border: solid 1px #333;
+	width: 60px;
+	height: 60px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+div.albumEdit {
+	width: 60px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+span.albumName {
+	font-size: 8pt;
+}
+div.membersArea {
+	border-left: solid 1px #333;
+	border-right: solid 1px #333;
+	border-bottom: solid 1px #333;
+	padding: 5px;
+}
+tr.memberRow:hover {
+	background-color: #D1DDF9;
+}
+div.biography {
+	padding: 5px;
+	height: auto;
+	border-left: solid 1px #333;
+	border-right: solid 1px #333;
+	border-bottom: solid 1px #333; 
+}
+div.triviaItem {
+	width: 100%;
+	height: auto;
+	padding-bottom: 6px;
+	font-weight: norma;
+}
+div.triviaLeft {
+	float: left;
+	width: 80%;
+	text-align: left;
+	padding-right: 10px;
+}
+div.triviaRight {
+	float: right;
+}
+
+div#detailsBox {
+	width: 300px;
+	min-height: 150px;
+	height: auto;
+	position: absolute;
+	background-color: #F5F7FF;
+	border: solid 1px #333;
+	display: none;
+}
+/* */
+
+div.itemName {
+	float: left;
+}
+
+div.itemPNG {
+	float: left;
+	margin-right: 5px;
+}
+div.thisItem:hover {
+	background-color: #ffcc66;
+}
+
+/* */
+#adminMenu {
+	width: 100%; 
+	height: 20px; 
+	background-color: #DDD;
+	border: solid 1px #333;
+	margin-bottom: 10px;
+}
+.adminButton {
+	float: left;
+	/*padding-left: 5px;
+	padding-right: 5px;*/
+	border-right: solid 1px #333;
+	height: 100%;
+	font-weight: bold;
+}
+a.menuTxt {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+div.genreBar {
+	width: 100%;
+	height: 20px;
+	background-color: #647DB8;
+	border: solid 1px #000;
+}
+div.genreName {
+	float: left;
+}
+div.genreRight {
+	float: right;
+}
+div.slideBtn {
+	width: 15px;
+	height: 15px;
+	margin-right: 8px;
+	margin-top: 2px;
+	float: left;
+	background-image: url('/theme/images/icons/arrowDown.png');
+	cursor: pointer;
+}
+div.deleteBtn {
+	width: 15px;
+	height: 15px;
+	margin-right: 3px;
+	margin-top: 2px;
+	float: left;
+	background-image: url('/theme/images/icons/delete2.png');
+	cursor: pointer;
+}
+div.editBtn {
+	width: 15px;
+	height: 15px;
+	margin-right: 8px;
+	margin-top: 2px;
+	float: left;
+	background-image: url('/theme/images/icons/edit.png');
+	cursor: pointer;
+	border-left: solid 1px #555;
+	border-bottom: solid 1px #555;
+}
+div.genreDesc {
+	display: none;
+	clear: both;
+	font-size: 9pt;
+}
+a.white {
+	color: #fff;
+	margin-left: 5px;
+	font-weight: bold;
+}
+div.albumHolder {
+	padding: 5px;
+	height: auto;
+	border-left: solid 1px #333;
+	border-right: solid 1px #333;
+	border-bottom: solid 1px #333;
+}
+div.album {
+	width: 80px;
+	height: auto;
+	float: left;
+	padding: 5px;
+	overflow: hidden;
+	text-align: center;
+}
+div.album:hover {
+	background-color: #D1DDF9;
+}
+div.albumArt {
+	border: solid 1px #333;
+	width: 60px;
+	height: 60px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+div.albumEdit {
+	width: 60px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+span.albumName {
+	font-size: 8pt;
+}
+div.membersArea {
+	border-left: solid 1px #333;
+	border-right: solid 1px #333;
+	border-bottom: solid 1px #333;
+	padding: 5px;
+}
+tr.memberRow:hover {
+	background-color: #D1DDF9;
+}
+div.biography {
+	padding: 5px;
+	height: auto;
+	border-left: solid 1px #333;
+	border-right: solid 1px #333;
+	border-bottom: solid 1px #333; 
+}
+div.triviaItem {
+	width: 100%;
+	height: auto;
+	padding-bottom: 6px;
+	font-weight: norma;
+}
+div.triviaLeft {
+	float: left;
+	width: 80%;
+	text-align: left;
+	padding-right: 10px;
+}
+div.triviaRight {
+	float: right;
+}
+
+div.genreBar {
+	width: 100%;
+	height: 20px;
+	background-color: #647DB8;
+	border: solid 1px #000;
+}
+div.genreName {
+	float: left;
+}
+div.genreRight {
+	float: right;
+}
+div.slideBtn {
+	width: 15px;
+	height: 15px;
+	margin-right: 8px;
+	margin-top: 2px;
+	float: left;
+	background-image: url('/theme/images/icons/arrowDown.png');
+	cursor: pointer;
+}
+div.deleteBtn {
+	width: 15px;
+	height: 15px;
+	margin-right: 3px;
+	margin-top: 2px;
+	float: left;
+	background-image: url('/theme/images/icons/delete2.png');
+	cursor: pointer;
+}
+div.editBtn {
+	width: 15px;
+	height: 15px;
+	margin-right: 8px;
+	margin-top: 2px;
+	float: left;
+	background-image: url('/theme/images/icons/edit.png');
+	cursor: pointer;
+}
+div.genreDesc {
+	display: none;
+	clear: both;
+	font-size: 9pt;
+	padding: 5px;
+	text-align: center;
+}
+a.white {
+	color: #fff;
+	margin-left: 5px;
+	font-weight: bold;
+}
+div#watch_icon {
+	float: left;
+}
+
+div#watch_rating_text {
+	float: left;
+	padding-left: 4px;
+	padding-top: 14px;
+}
+
+ul#watch_rating_text {
+	font-size: 7pt;
+	text-align: left;
+}
+
+div.genreBar {
+	width: 100%;
+	height: 20px;
+	background-color: #647DB8;
+	border: solid 1px #000;
+}
+div.genreName {
+	float: left;
+}
+div.genreRight {
+	float: right;
+}
+div.slideBtn {
+	width: 15px;
+	height: 15px;
+	margin-right: 8px;
+	margin-top: 2px;
+	float: left;
+	background-image: url('/theme/images/icons/arrowDown.png');
+	cursor: pointer;
+}
+div.deleteBtn {
+	width: 15px;
+	height: 15px;
+	margin-right: 3px;
+	margin-top: 2px;
+	float: left;
+	background-image: url('/theme/images/icons/delete2.png');
+	cursor: pointer;
+}
+div.editBtn {
+	width: 15px;
+	height: 15px;
+	margin-right: 8px;
+	margin-top: 2px;
+	float: left;
+	background-image: url('/theme/images/icons/edit.png');
+	cursor: pointer;
+	border-left: solid 1px #555;
+	border-bottom: solid 1px #555;
+}
+div.genreDesc {
+	display: none;
+	clear: both;
+	font-size: 9pt;
+}
+a.white {
+	color: #fff;
+	margin-left: 5px;
+	font-weight: bold;
+}
+div.albumHolder {
+	padding: 5px;
+	height: auto;
+	border-left: solid 1px #333;
+	border-right: solid 1px #333;
+	border-bottom: solid 1px #333;
+}
+div.album {
+	width: 80px;
+	height: auto;
+	float: left;
+	padding: 5px;
+	overflow: hidden;
+	text-align: center;
+}
+div.album:hover {
+	background-color: #D1DDF9;
+}
+div.albumArt {
+	border: solid 1px #333;
+	width: 60px;
+	height: 60px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+div.albumEdit {
+	width: 60px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+span.albumName {
+	font-size: 8pt;
+}
+div.membersArea {
+	border-left: solid 1px #333;
+	border-right: solid 1px #333;
+	border-bottom: solid 1px #333;
+	padding: 5px;
+}
+tr.memberRow:hover {
+	background-color: #D1DDF9;
+}
+div.biography {
+	padding: 5px;
+	height: auto;
+	border-left: solid 1px #333;
+	border-right: solid 1px #333;
+	border-bottom: solid 1px #333; 
+}
+div.triviaItem {
+	width: 100%;
+	height: auto;
+	padding-bottom: 6px;
+	font-weight: norma;
+}
+div.triviaLeft {
+	float: left;
+	width: 80%;
+	text-align: left;
+	padding-right: 10px;
+}
+div.triviaRight {
+	float: right;
+}
+
+div.genreBar {
+	width: 100%;
+	height: 20px;
+	background-color: #647DB8;
+	border: solid 1px #000;
+}
+div.genreName {
+	float: left;
+}
+div.genreRight {
+	float: right;
+}
+div.slideBtn {
+	width: 15px;
+	height: 15px;
+	margin-right: 8px;
+	margin-top: 2px;
+	float: left;
+	background-image: url('/theme/images/icons/arrowDown.png');
+	cursor: pointer;
+}
+div.deleteBtn {
+	width: 15px;
+	height: 15px;
+	margin-right: 3px;
+	margin-top: 2px;
+	float: left;
+	background-image: url('/theme/images/icons/delete2.png');
+	cursor: pointer;
+}
+div.editBtn {
+	width: 15px;
+	height: 15px;
+	margin-right: 8px;
+	margin-top: 2px;
+	float: left;
+	background-image: url('/theme/images/icons/edit.png');
+	cursor: pointer;
+}
+div.genreDesc {
+	display: none;
+	clear: both;
+	font-size: 9pt;
+	padding: 5px;
+	text-align: left;
+}
+a.white {
+	color: #fff;
+	margin-left: 5px;
+	font-weight: bold;
+}
+div#watch_icon {
+	float: left;
+}
+
+div#watch_rating_text {
+	float: left;
+	padding-left: 4px;
+	padding-top: 14px;
+}
+
+ul#watch_rating_text {
+	font-size: 7pt;
+	text-align: left;
+}
+
+div.deleteBtn {
+	width: 15px;
+	height: 15px;
+	margin-right: 3px;
+	margin-top: 2px;
+	float: left;
+	background-image: url('/theme/images/icons/delete2.png');
+	cursor: pointer;
+}
+div.editBtn {
+	width: 15px;
+	height: 15px;
+	margin-right: 8px;
+	margin-top: 2px;
+	float: left;
+	background-image: url('/theme/images/icons/edit.png');
+	cursor: pointer;
+	border-left: solid 1px #555;
+	border-bottom: solid 1px #555;
+}
+
+td.colH {
+	width: 33%;
+	font-weight: bold;
+	text-align: center;
+	color: #fff;
+	border-right: solid 1px #333;
+	border-bottom: solid 1px #333;
+	background-color: #647DB8;
+}
+
+td.col {
+	border-right: solid 1px #333;
+	border-bottom: solid 1px #333;
+}
+
+div.rowLeft {
+	padding: 3px 0px 3px 3px;
+	float: left;
+}
+
+div.rowRight {
+	padding: 3px 3px 3px 0px;
+	float: right;
+}
+
+div.itemRow {
+	font-size: 8pt;
+	line-height: 13pt;
+	width: 100%;
+	height: auto;
+}
+
+div.itemRow:hover {
+	background-color: #D1DDF9;
+}
+/* */

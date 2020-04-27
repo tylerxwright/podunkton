@@ -1,0 +1,19 @@
+Options +FollowSymlinks
+Options -Indexes
+RewriteEngine On
+#RewriteRule ^([0-9A-Z])+ index.php
+#RewriteRule ^citizen/([0-9A-Za-z]+) engine/users.php?name=$1 [nc]
+RewriteRule ^(.*\.css)$ $1 [L]
+RewriteRule ^(.*\.gif)$ $1 [L]
+RewriteRule ^(.*\.png)$ $1 [L]
+RewriteRule ^(.*\.jpg)$ $1 [L]
+RewriteRule ^(.*\.swf)$ $1 [L]
+RewriteRule ^(.*\.ico)$ $1 [L]
+RewriteRule ^(.*\.htm)$ $1 [L]
+RewriteRule ^(.*\.jpeg)$ $1 [L]
+RewriteRule ^(.*\.js)$ $1 [L]
+RewriteRule ^(.*\.call)$ $1 [L]
+RewriteRule ^(.*\.XMLHTTP)$ $1 [L]
+RewriteRule ^(.*\.xml)$ $1 [L]
+RewriteRule ^(.*\.cgi)$ $1 [L]
+RewriteRule ^(.*)$ index.php?q=$1 [L,QSA]

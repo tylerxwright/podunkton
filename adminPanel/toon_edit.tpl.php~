@@ -1,0 +1,125 @@
+<?php
+	global $database;
+	global $core;
+	$number = 1;
+	$tid = $core->args[3];
+	$result = $database->db_query("SELECT * FROM Toons WHERE tid = '$tid'");
+	$row = mysql_fetch_array($result);
+	$otherResult = $database->db_query("SELECT * FROM Toons_has_Cast WHERE tid = '$tid'");
+?>
+
+<script type="text/javascript">
+	var castNum = <?php echo mysql_num_rows($otherResult); ?>;
+
+	function addCast() {
+		castNum++;
+		str = "";
+		var tempNum = 1;
+		var arr = new Array();
+		while(tempNum < castNum)
+		{
+			arr[tempNum] = document.getElementById("castMember"+tempNum).value;
+			tempNum++;
+		}	
+		for(i = 1; i < castNum; i++)
+		{
+			if(i == 1)
+			{
+				str += "<input type='text' id ='castMember"+i+"' name='castMember"+i+"' value='"+arr[i]+"'  />";
+			}
+			else
+			{
+				str += "<br/><input type='text' id ='castMember"+i+"' name='castMember"+i+"' value='"+arr[i]+"'  />";
+			}
+		}
+	
+		str += "<br/><input type='text' id ='castMember"+i+"' name='castMember"+i+"' value=''  />"
+			document.getElementById("castMembers2").innerHTML = str;
+		
+	}
+
+
+
+
+</script>
+<b>Add New Toon</b><br/>
+<form enctype="multipart/form-data" action="/process/admin_toon_edit" method="POST">
+	<table>
+		<tr>
+			<td>Name:</td>
+			<td><input type="text" name="name" value="<?php echo $row['name'];?>"/></td>
+		</tr>
+		<tr>
+			<td>Season:</td>
+			<td><input type="text" name="season"  value="<?php echo $row['season'];?>"/></td>
+		</tr>
+		<tr>
+			<td>File:</td>
+			<td><input type="file" name="file" /></td>
+		</tr>
+		<tr>
+			<td>Icon Small:</td>
+			<td><input type="file" name="iconS" /></td>
+		</tr>
+		<tr>
+			<td>Icon Large:</td>
+			<td><input type="file" name="iconL" /></td>
+		</tr>
+		<tr>
+			<td>Release Date:</td>
+			<td><input type="text" name="rDate"  value="<?php echo $row['releaseDate'];?>"/></td>
+		</tr>
+		<tr>
+			<td>New Grounds Link</td>
+			<td><input type="text" name="NG_Link"  value="<?php echo $row['ngLink'];?>"/></td>
+		</tr>
+		<tr>
+			<td>Featured Image</td>
+			<td><input type="file" name="fImage" /></td>
+		</tr>
+		<tr>
+			<td valign="top">description:</td>
+			<td><textarea cols="40" rows="5" name="description"><?php echo $row['description']; ?></textarea></td>
+		</tr>
+		<tr>
+			<td>Episode:</td>
+			<td><input type="text" name="episode"  value="<?php echo $row['episode'];?>"/></td>
+		</tr>
+		<tr>
+			<td>PointCost:</td>
+			<td><input type="text" name="pointcost"  value="<?php echo $row['pointCost'];?>"/></td>
+		</tr>
+		<tr>
+			<td>Featured:</td>
+			<td><input type="checkbox" name="featured" /></td>
+		</tr>
+		<tr>
+			<td valign="top">Cast:</td>
+			<td id="castMembers2">
+		<?php
+			$current = 1;
+			while($row = mysql_fetch_array($otherResult)){
+			
+		?>
+		
+			<input id="castMember<?php echo $current; ?>" type="text" name="castMember<?php echo $current; ?>" value="<?php echo $row['uid']; ?>" /><br/>
+		<?php
+			$current++;
+			}
+		?>
+			</td>
+		</tr>
+		
+		<tr>
+			<td></td>
+			<td><input type="button" value="Add Cast Member" onclick="addCast();"/></td>
+			<input type="hidden" name="toonID" value="<?php echo $tid; ?>" />
+		</tr>
+ 
+		<tr>
+			<td></td>
+			<td><br/><input type="submit" value="Submit" /></td>
+		</tr>
+	</table>
+</form>
+

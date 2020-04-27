@@ -1,0 +1,16 @@
+<?php
+	$myTime = localtime();
+	$dayTime = "AM";
+	$sec = $myTime[0];
+	$min = $myTime[1];
+	$hour = $myTime[2];
+	//if($sec < 10) $sec = "0".$sec;
+	//if($min < 10) $min = "0".$min;
+	if($hour < 10) {
+		//$hour = "0".$hour;
+	} else if($hour > 12){
+		//$hour = "0" . ($hour-12);
+		$dayTime = "PM";
+	}
+	print "hour=$hour&min=$min&sec=$sec&daytime=$dayTime";
+?>

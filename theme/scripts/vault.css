@@ -1,0 +1,72 @@
+ul.vault {
+	padding: 0px;
+	margin-left: 20px;
+	list-style: circle;
+}
+
+ul.vault li.vault{
+	list-style: circle;
+}
+
+ul.inner {
+	padding: 0px;
+	margin-left: 40px;
+	list-style: circle;
+}
+
+ul.inner li.inner {
+	list-style: circle;
+}
+
+div#vault_header {
+	border-bottom:1px solid #A3B3DB;
+	color:#989898;
+	font-size:7pt;
+	height:78px;
+	padding-right:8px;
+	width:780px;
+
+}
+
+div#vault_header_left {
+	float: left;
+	padding: 0px;
+}
+
+div#vault_header_right {
+	padding-top: 60px;
+	float: right;
+}
+
+div.vault_header_link {
+	padding-left: 10px;
+	float: left;
+
+}
+
+div.vault_links {
+	font-size:7pt;
+	padding: 4px;
+	overflow: hidden;
+}
+
+div.vault_site_box_content {
+	width: 100%;
+	background-color: #fff;
+	border-left: solid 1px #7E7E7E;
+	border-bottom: solid 1px #7E7E7E;
+	border-right: solid 1px #7E7E7E;
+	min-height: 835px; 
+	height: expression( this.scrollHeight < 836 ? "835px" : "auto" );
+	overflow: hidden;
+}
+
+div#vault_ad_bottom {
+	background-image:url(/theme/images/forums_ad2_back.png);
+	border:1px solid #7E7E7E;
+	height:93px;
+	padding-left:20px;
+	padding-top:3px;
+	width:750px;
+	overflow: hidden;
+}

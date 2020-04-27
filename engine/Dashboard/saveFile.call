@@ -1,0 +1,13 @@
+<?php
+	$file = $_POST['fileToSave'];
+	$data = $_POST['data'];
+
+	$data = str_replace("\r", "\n", $data);
+
+	$handle = fopen("../../".$file, "w");
+	fwrite($handle, $data);
+	
+	echo $file." ".$data;
+
+	fclose($handle);
+?>

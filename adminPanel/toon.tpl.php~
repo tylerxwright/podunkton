@@ -1,0 +1,40 @@
+<?php
+	global $core;
+?>
+<?php
+	if(isset($core->args[2])){
+		if(is_numeric($core->args[2])){
+			include_once("adminPanel/toon_view.tpl.php");
+		} else {
+			switch($core->args[2]){
+				case "add":
+					include_once("adminPanel/toon_add.tpl.php");
+					break;
+				case "edit":
+					include_once("adminPanel/toon_main.tpl.php");
+					break;
+				case "delete":
+					include_once("adminPanel/toon_delete.tpl.php");
+					break;
+				case "trivia":
+					switch($core->args[3]){
+						case "add":
+							include_once("adminPanel/trivia_add.tpl.php");
+							break;
+						case "edit":
+							include_once("adminPanel/trivia_edit.tpl.php");
+							break;
+						case "delete":
+							include_once("adminPanel/trivia_delete.tpl.php");
+							break;
+					}
+					break;
+				default:
+					include_once("theme/errordocs/404.tpl.php");
+					break;
+			}
+		}
+	} else {
+		include_once("adminPanel/toon_main.tpl.php");
+	}
+?>

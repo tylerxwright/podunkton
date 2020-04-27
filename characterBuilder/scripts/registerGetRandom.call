@@ -1,0 +1,57 @@
+<?php
+
+	include_once("../../engine/Core.php");
+	
+	$sex = $_POST['sex'];
+	
+	$count = 0;
+	$return = '';
+	
+	$query = sprintf("select s.skinNum, s.head, s.forearm1, s.arm1, s.body, s.forearm2, s.arm2, s.legs FROM Skins as s WHERE sex='%s' ORDER BY RAND() LIMIT 1", $sex);
+	$result = mysql_query($query, $database->connection);
+	$row = mysql_fetch_object($result);
+	$skinNum = $row->skinNum;
+	$head = $row->head;
+	$forearm1 = $row->forearm1;
+	$arm1 = $row->arm1;
+	$body = $row->body;
+	$forearm2 = $row->forearm2;
+	$arm2 = $row->arm2;
+	$legs = $row->legs;
+	
+	$return .= "skinNum=$skinNum&head=$head&forearm1=$forearm1&arm1=$arm1&body=$body&forearm2=$forearm2&arm2=$arm2&legs=$legs&";
+	
+	$query = sprintf("select pid, swf1, swf2 FROM Physical_Features WHERE sex='%s' AND type='hair' ORDER BY RAND() LIMIT 1", $sex);
+	$result = mysql_query($query, $database->connection);
+	$row = mysql_fetch_object($result);
+	$pid = $row->pid;
+	$png = $row->png;
+	$slot1 = $row->slot1;
+	$slot2 = $row->slot2;
+	$swf1 = $row->swf1;
+	$swf2 = $row->swf2;
+	$return .= "hairid=$pid&hairswf1=$swf1&hairswf2=$swf2&";
+	
+	$query = sprintf("select pid, swf1 FROM Physical_Features WHERE sex='%s' AND type='eyes' ORDER BY RAND() LIMIT 1", $sex);
+	$result = mysql_query($query, $database->connection);
+	$row = mysql_fetch_object($result);
+	$pid = $row->pid;
+	$png = $row->png;
+	$slot1 = $row->slot1;
+	$swf1 = $row->swf1;
+	$return .= "eyesid=$pid&eyesslot1=$slot1&eyesswf1=$swf1&";
+	
+	$query = sprintf("select pid, swf1, swf2 FROM Physical_Features WHERE sex='%s' AND type='eyebrows' ORDER BY RAND() LIMIT 1", $sex);
+	$result = mysql_query($query, $database->connection);
+	$row = mysql_fetch_object($result);
+	$pid = $row->pid;
+	$png = $row->png;
+	$slot1 = $row->slot1;
+	$slot2 = $row->slot2;
+	$swf1 = $row->swf1;
+	$swf2 = $row->swf2;
+	$return .= "eyebrowsid=$pid&eyebrowsswf1=$swf1&eyebrowsswf2=$swf2&";
+	
+	echo $return;
+	
+?>

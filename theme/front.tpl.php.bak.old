@@ -1,0 +1,279 @@
+<?php
+ include_once("theme/sidebars/left.tpl.php");
+?>
+<div id="page_content">
+	<div class="site_box" style="width: 471px;">
+		<div class="site_box_head" style="text-align: left;">
+			<div class="forum_head">
+				<div class="forum_head_icon">
+					<img src="/theme/images/onlineicon.png" />
+				</div>
+				<div class="forum_head_center">
+					<span class="whitebold10">CYCON</span>
+					<span class="grey10">[offline]</span>
+				</div>
+				<div class="forum_head_right">
+					Posted at: 4/28/08 06:19 PM
+				</div>
+			</div>
+		</div>
+		<div class="forum_content">
+			<div class="forum_left">
+				<div class="forum_left_avatar">
+					<img src="/theme/images/avatar.png" />
+				</div>
+				<div class="forum_left_info">
+					<div class="forum_fade_top_left"></div>
+					<div class="forum_fade_top_center" style="width: 109px;"></div>
+					<div class="forum_fade_top_right"></div>
+					<div style="clear: both;"></div>
+					<div class="forum_info">
+						<table class="forum_info_table">
+							<tr><td style="width: 58px;">LEVEL:</td><td style="width: 58px;">99</td></tr>							
+							<tr><td style="width: 117px;" colspan="2">
+								<div style="width: 30px; float: left;">EXP:</div>
+								<div class="xpbar">
+									<div class="xpside"></div>
+									<div class="xpmain">
+										<div class="xpfill" style="width: 80%;"></div>
+									</div>
+									<div class="xpside"></div>
+									<div style="clear: both;"></div>
+								</div>
+								<div style="clear: both;"></div>
+							</td></tr>
+							<tr><td style="width: 117px;" colspan="2">
+								<div class="angel"></div>
+								<div class="good_evil_bar">
+									<!--0 to 75-->
+									<div class="good_evil_marker" style="left: 37px;"></div>
+								</div>
+								<div class="devil"></div>
+								<div style="clear: both;"></div>
+							</td></tr>
+							<tr><td style="width: 58px;">Sign-up:</td><td style="width: 58px;">04-17-08</td></tr>
+							<tr><td style="width: 58px;">Posts:</td><td style="width: 58px;">764</td></tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="forum_right">
+				<div class="forum_right_content">
+					<div class="forum_fade_top_left"></div>
+					<div class="forum_fade_top_center"></div>
+					<div class="forum_fade_top_right"></div>
+					<div style="clear: both;"></div>
+					<div class="forum_post_container">
+						<div class="forum_post">
+							There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+						</div>
+					</div>
+				</div>
+				<div class="forum_right_bar">
+					<div class="forum_fade_top_left"></div>
+					<div class="forum_fade_top_center"></div>
+					<div class="forum_fade_top_right"></div>
+					<div style="clear: both;"></div>
+					<div class="forum_bar">
+						<div class="forum_bar_left">
+							<a href="#"><img onclick="privateMessageOpen();" src="/theme/images/icon_pm.png" /></a>
+							<a href="#"><img src="/theme/images/icon_blog.png" /></a>
+							<a href="#"><img src="/theme/images/icon_trade.png" /></a>
+							<a href="#"><img src="/theme/images/icon_aim.png" /></a>
+						</div>
+						<div class="forum_bar_right">
+							<a href="#"><img src="/theme/images/button_reply.png" /></a>
+							<a href="#"><img src="/theme/images/button_comments.png" /></a>
+						</div>
+						<div style="clear: both;"></div>
+					</div>
+				</div>
+			</div>
+			<div style="clear: both;"></div>
+		</div>
+	</div>
+	<div style="width: 481px; height: 8px;"></div>
+	<div class="site_box" style="width: 471px;">
+		<div class="site_box_head" style="text-align: left;">
+			<div class="forum_head">
+				<div class="forum_head_icon">
+					<img src="/theme/images/onlineicon.png" />
+				</div>
+				<div class="forum_head_center">
+					<span class="whitebold10">CYCON</span>
+					<span class="grey10">[offline]</span>
+				</div>
+				<div class="forum_head_right">
+					Posted at: 4/28/08 06:19 PM
+				</div>
+			</div>
+		</div>
+		<div class="forum_content">
+			<div class="forum_left">
+				<div class="forum_left_avatar">
+					<img src="/theme/images/avatar.png" />
+				</div>
+				<div class="forum_left_info">
+					<div class="forum_fade_top_left"></div>
+					<div class="forum_fade_top_center" style="width: 109px;"></div>
+					<div class="forum_fade_top_right"></div>
+					<div style="clear: both;"></div>
+					<div class="forum_info">
+						<table class="forum_info_table">
+							<tr><td style="width: 58px;">LEVEL:</td><td style="width: 58px;">99</td></tr>							
+							<tr><td style="width: 117px;" colspan="2">
+								<div style="width: 30px; float: left;">EXP:</div>
+								<div class="xpbar">
+									<div class="xpside"></div>
+									<div class="xpmain">
+										<div class="xpfill" style="width: 20%;"></div>
+									</div>
+									<div class="xpside"></div>
+									<div style="clear: both;"></div>
+								</div>
+								<div style="clear: both;"></div>
+							</td></tr>
+							<tr><td style="width: 117px;" colspan="2">
+								<div class="angel"></div>
+								<div class="good_evil_bar">
+									<!--0 to 75-->
+									<div class="good_evil_marker" style="left: 37px;"></div>
+								</div>
+								<div class="devil"></div>
+								<div style="clear: both;"></div>
+							</td></tr>
+							<tr><td style="width: 58px;">Sign-up:</td><td style="width: 58px;">04-17-08</td></tr>
+							<tr><td style="width: 58px;">Posts:</td><td style="width: 58px;">764</td></tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="forum_right">
+				<div class="forum_right_content">
+					<div class="forum_fade_top_left"></div>
+					<div class="forum_fade_top_center"></div>
+					<div class="forum_fade_top_right"></div>
+					<div style="clear: both;"></div>
+					<div class="forum_post_container">
+						<div class="forum_post">
+							There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.							
+						</div>
+					</div>
+				</div>
+				<div class="forum_right_bar">
+					<div class="forum_fade_top_left"></div>
+					<div class="forum_fade_top_center"></div>
+					<div class="forum_fade_top_right"></div>
+					<div style="clear: both;"></div>
+					<div class="forum_bar">
+						<div class="forum_bar_left">
+							<a href="#"><img src="/theme/images/icon_pm.png" /></a>
+							<a href="#"><img src="/theme/images/icon_blog.png" /></a>
+							<a href="#"><img src="/theme/images/icon_trade.png" /></a>
+							<a href="#"><img src="/theme/images/icon_aim.png" /></a>
+						</div>
+						<div class="forum_bar_right">
+							<a href="#"><img src="/theme/images/button_reply.png" /></a>
+							<a href="#"><img src="/theme/images/button_comments.png" /></a>
+						</div>
+						<div style="clear: both;"></div>
+					</div>
+				</div>
+			</div>
+			<div style="clear: both;"></div>
+		</div>
+	</div>
+	<div style="width: 481px; height: 8px;"></div>
+	<div class="site_box" style="width: 471px;">
+		<div class="site_box_head" style="text-align: left;">
+			<div class="forum_head">
+				<div class="forum_head_icon">
+					<img src="/theme/images/onlineicon.png" />
+				</div>
+				<div class="forum_head_center">
+					<span class="whitebold10">CYCON</span>
+					<span class="grey10">[offline]</span>
+				</div>
+				<div class="forum_head_right">
+					Posted at: 4/28/08 06:19 PM
+				</div>
+			</div>
+		</div>
+		<div class="forum_content">
+			<div class="forum_left">
+				<div class="forum_left_avatar">
+					<img src="/theme/images/avatar.png" />
+				</div>
+				<div class="forum_left_info">
+					<div class="forum_fade_top_left"></div>
+					<div class="forum_fade_top_center" style="width: 109px;"></div>
+					<div class="forum_fade_top_right"></div>
+					<div style="clear: both;"></div>
+					<div class="forum_info">
+						<table class="forum_info_table">
+							<tr><td style="width: 58px;">LEVEL:</td><td style="width: 58px;">99</td></tr>							
+							<tr><td style="width: 117px;" colspan="2">
+								<div style="width: 30px; float: left;">EXP:</div>
+								<div class="xpbar">
+									<div class="xpside"></div>
+									<div class="xpmain">
+										<div class="xpfill" style="width: 20%;"></div>
+									</div>
+									<div class="xpside"></div>
+									<div style="clear: both;"></div>
+								</div>
+								<div style="clear: both;"></div>
+							</td></tr>
+							<tr><td style="width: 117px;" colspan="2">
+								<div class="angel"></div>
+								<div class="good_evil_bar">
+									<!--0 to 75-->
+									<div class="good_evil_marker" style="left: 37px;"></div>
+								</div>
+								<div class="devil"></div>
+								<div style="clear: both;"></div>
+							</td></tr>
+							<tr><td style="width: 58px;">Sign-up:</td><td style="width: 58px;">04-17-08</td></tr>
+							<tr><td style="width: 58px;">Posts:</td><td style="width: 58px;">764</td></tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="forum_right">
+				<div class="forum_right_content">
+					<div class="forum_fade_top_left"></div>
+					<div class="forum_fade_top_center"></div>
+					<div class="forum_fade_top_right"></div>
+					<div style="clear: both;"></div>
+					<div class="forum_post_container">
+						<div class="forum_post">
+							There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.							
+						</div>
+					</div>
+				</div>
+				<div class="forum_right_bar">
+					<div class="forum_fade_top_left"></div>
+					<div class="forum_fade_top_center"></div>
+					<div class="forum_fade_top_right"></div>
+					<div style="clear: both;"></div>
+					<div class="forum_bar">
+						<div class="forum_bar_left">
+							<a href="#"><img src="/theme/images/icon_pm.png" /></a>
+							<a href="#"><img src="/theme/images/icon_blog.png" /></a>
+							<a href="#"><img src="/theme/images/icon_trade.png" /></a>
+							<a href="#"><img src="/theme/images/icon_aim.png" /></a>
+						</div>
+						<div class="forum_bar_right">
+							<a href="#"><img src="/theme/images/button_reply.png" /></a>
+							<a href="#"><img src="/theme/images/button_comments.png" /></a>
+						</div>
+						<div style="clear: both;"></div>
+					</div>
+				</div>
+			</div>
+			<div style="clear: both;"></div>
+		</div>
+	</div>
+</div>
+<?php include_once("theme/sidebars/right.tpl.php"); ?>
+<div style="clear:both;"></div>

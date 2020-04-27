@@ -1,0 +1,34 @@
+<?php
+	global $core;
+	global $database;
+	global $session;
+
+if($session->user){
+	
+	$result = $database->db_query("SELECT name, userID FROM Users WHERE userID != ".$session->user);
+?>
+
+<b>Write a message</b>
+<form action="/process/addMessage" method="POST">
+	<table border="0">
+		<tr><td>To:</td><td>
+			<select name="recievers">
+			<?php
+				while($row = mysqli_fetch_object($result)){
+			?>
+				<option value="<?php echo $row->userID; ?>"><?php echo $row->name; ?></option>
+			<?php
+				}
+			?>
+			</select>
+		</td>ale</tr>
+		<tr><td>Subject:</td><td><input type="text" name="subject" size="39"/></td></tr>
+		<tr><td valign="top">Message:</td><td><textarea name="message" rows="7" cols="60"></textarea></td></tr>
+		<tr><td></td><td><input type="submit" name="submit" value="Send Message"/></td></tr>
+	</table>
+</form>
+<?php
+} else  {
+
+
+}

@@ -1,0 +1,180 @@
+<?php
+	global $core;
+?>
+<style type="text/css">
+#adminMenu {
+	width: 100%; 
+	height: 20px; 
+	background-color: #DDD;
+	border: solid 1px #333;
+	margin-bottom: 10px;
+}
+.adminButton {
+	float: left;
+	/*padding-left: 5px;
+	padding-right: 5px;*/
+	border-right: solid 1px #333;
+	height: 100%;
+	font-weight: bold;
+}
+.drop {
+	position: relative;
+	top: -18px;
+	left: -1px;
+	padding-top: 20px;
+	height: 0px;
+	width: 100%;
+	overflow: hidden;
+}
+.drop:hover {
+	overflow: visible;
+}
+.dropBtn {
+	width: 100%;
+	background-color: #f3f3f3;
+	border-left: solid 1px #333;
+	border-right: solid 1px #333;
+	border-bottom: solid 1px #333;
+	height: 20px;
+}
+.dropBtn:hover {
+	background-color: #FF9900;
+}
+a.menuTxt {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+</style>
+<div id="adminMenu">
+	<div class="adminButton" <?php if(!isset($core->args[2])) { ?>style="background-color: #f3f3f3;"<?php } ?>>
+		<a class="menuTxt" href="/admin/audio">Audio</a>
+	</div>
+	<div class="adminButton" <?php if($core->args[2] == "band") { ?>style="background-color: #f3f3f3;"<?php } ?>>
+		<a class="menuTxt" href="/admin/audio/band">Bands</a>
+		<div class="drop">
+			<div class="dropBtn"><a class="menuTxt" href="/admin/audio/band">Main</a></div>
+			<div class="dropBtn"><a class="menuTxt" href="/admin/audio/band/add">Add</a></div>
+			<div class="dropBtn"><a class="menuTxt" href="/admin/audio/band/edit">Edit</a></div>
+			<div class="dropBtn"><a class="menuTxt" href="/admin/audio/band/delete">Delete</a></div>
+		</div>
+	</div>
+	<div class="adminButton" <?php if($core->args[2] == "genre") { ?>style="background-color: #f3f3f3;"<?php } ?>>
+		<a class="menuTxt" href="/admin/audio/genre">Genres</a>
+		<div class="drop">
+			<div class="dropBtn"><a class="menuTxt" href="/admin/audio/genre">Main</a></div>
+			<div class="dropBtn"><a class="menuTxt" href="/admin/audio/genre/add">Add</a></div>
+			<div class="dropBtn"><a class="menuTxt" href="/admin/audio/genre/edit">Edit</a></div>
+		</div>
+	</div>
+	<div class="adminButton" <?php if($core->args[2] == "instrument") { ?>style="background-color: #f3f3f3;"<?php } ?>>
+		<a class="menuTxt" href="/admin/audio/instrument">Instruments</a>
+		<div class="drop">
+			<div class="dropBtn"><a class="menuTxt" href="/admin/audio/instrument">Main</a></div>
+			<div class="dropBtn"><a class="menuTxt" href="/admin/audio/instrument/add">Add</a></div>
+			<div class="dropBtn"><a class="menuTxt" href="/admin/audio/instrument/edit">Edit</a></div>
+			<div class="dropBtn"><a class="menuTxt" href="/admin/audio/instrument/delete">Delete</a></div>
+		</div>
+	</div>
+	<div class="adminButton" <?php if($core->args[2] == "recordlabel") { ?>style="background-color: #f3f3f3;"<?php } ?>>
+		<a class="menuTxt" href="/admin/audio/recordlabel">Record Labels</a>
+		<div class="drop">
+			<div class="dropBtn"><a class="menuTxt" href="/admin/audio/recordlabel">Main</a></div>
+			<div class="dropBtn"><a class="menuTxt" href="/admin/audio/recordlabel/add">Add</a></div>
+			<div class="dropBtn"><a class="menuTxt" href="/admin/audio/recordlabel/edit">Edit</a></div>
+			<div class="dropBtn"><a class="menuTxt" href="/admin/audio/recordlabel/delete">Delete</a></div>
+		</div>
+	</div>
+</div>
+<?php
+	global $core;
+	
+	if(isset($core->args[2])){
+		switch($core->args[2]){
+			case "band":
+				if(isset($core->args[3])){
+					switch($core->args[3]){
+						case "add":
+							include_once("adminPanel/audio_band_add.tpl.php");
+							break;
+						case "edit":
+							include_once("adminPanel/audio_band_edit.tpl.php");
+							break;
+						case "delete":
+							include_once("adminPanel/audio_band_delete.tpl.php");
+							break;
+						default:
+						include_once("theme/errordocs/404.tpl.php");
+						break;
+					}
+				} else {
+					include_once("adminPanel/audio_band.tpl.php");
+				}
+				break;
+			case "genre":
+				if(isset($core->args[3])){
+					switch($core->args[3]){
+						case "add":
+							include_once("adminPanel/audio_genre_add.tpl.php");
+							break;
+						case "edit":
+							include_once("adminPanel/audio_genre_edit.tpl.php");
+							break;
+						case "delete":
+							include_once("adminPanel/audio_genre_delete.tpl.php");
+							break;
+						default:
+						include_once("theme/errordocs/404.tpl.php");
+						break;
+					}
+				} else {
+					include_once("adminPanel/audio_genre.tpl.php");
+				}
+				break;
+			case "instrument":
+				if(isset($core->args[3])){
+					switch($core->args[3]){
+						case "add":
+							include_once("adminPanel/audio_instrument_add.tpl.php");
+							break;
+						case "edit":
+							include_once("adminPanel/audio_instrument_edit.tpl.php");
+							break;
+						case "delete":
+							include_once("adminPanel/audio_instrument_delete.tpl.php");
+							break;
+						default:
+						include_once("theme/errordocs/404.tpl.php");
+						break;
+					}
+				} else {
+					include_once("adminPanel/audio_instrument.tpl.php");
+				}
+				break;
+			case "recordlabel":
+				if(isset($core->args[3])){
+					switch($core->args[3]){
+						case "add":
+							include_once("adminPanel/audio_recordlabel_add.tpl.php");
+							break;
+						case "edit":
+							include_once("adminPanel/audio_recordlabel_edit.tpl.php");
+							break;
+						case "delete":
+							include_once("adminPanel/audio_recordlabel_delete.tpl.php");
+							break;
+						default:
+						include_once("theme/errordocs/404.tpl.php");
+						break;
+					}
+				} else {
+					include_once("adminPanel/audio_recordlabel.tpl.php");
+				}
+				break;
+			default:
+				include_once("theme/errordocs/404.tpl.php");
+				break;
+		}
+	} else {
+		include_once("adminPanel/audio_main.tpl.php");
+	}
+?>

@@ -1,0 +1,160 @@
+div#community_top_left {
+	width: 122px;
+	margin-top: 20px;
+	float: left;
+}
+
+div#community_top_middle {
+	width: 470px;
+	float: left;
+	padding-left: 8px;
+	padding-right: 8px;
+	margin-top: 20px;
+}
+
+div#community_ad_scroller {
+	width: 470px;
+	height: 242px;
+	background-color: #ffffff;
+}
+
+div#community_top_right {
+	width: 182px;
+	float: left;
+}
+
+div#community_ad2 {
+	width: 758px;
+	height: 93px;
+	padding-top: 3px;
+	padding-left: 30px;
+	background-image: url("/theme/images/forums_ad2_back.png");
+	border: solid 1px #7E7E7E;
+}
+
+div.community_title {
+	color: #fff;
+	padding-top: 4px;
+	font-size: 10pt;
+	font-weight: bold;
+	text-align: center;
+}
+
+div#community_citizen_search {
+	width: 232px;
+	height: 246px;
+	float: left;
+	background-image: url("/theme/images/citizen_search.png");
+}
+
+div#community_featured_citizen {
+	width: 232px;
+	height: 246px;
+	margin-left: 6px;
+	float: left;
+	background-image: url("/theme/images/featured_citizen.png");
+}
+
+div#community_featured_citizen_name {
+	font-weight: bold;
+	color: #444;
+	font-size: 9pt;
+	text-align: center;
+	width: 232px;
+}
+
+div#community_featured_character {
+	margin-left: 40px;
+	margin-top: 30px;
+}
+
+div.user_friend_selector {
+	width: 75px;
+	height: 75px;
+	padding-top: 11px;
+	text-align: center;
+}
+
+div.user_friend_icon {
+	width: 35px;
+	height: 35px;
+	margin-left: 36px;
+	border: solid 1px #828282;
+}
+
+div.user_friend_link {
+	padding-top: 5px;
+	font-size: 10pt;
+	line-height: 10pt;
+	color: #647DB8;
+	width: 110px;
+	text-align: center;
+}
+
+div#user_friend_all {
+	font-size: 10pt;
+	line-height: 10pt;
+	padding-right: 8px;
+	width: 110px;
+	text-align: center;
+}
+
+div#community_bot_left {
+	width: 122px;
+	float: left;
+}
+
+div#community_bot_middle {
+	width: 363px;
+	padding-left: 8px;
+	padding-right: 8px;
+	float: left;
+}
+
+div#community_thread_top {
+	width: 363px;
+	height: 22px;
+	background-image: url("/theme/images/community_thread_top.png");
+}
+
+div#community_thread_mid {
+	width: 361px;
+	height: 198px;
+	border: solid 1px #828282;
+}
+
+div.community_thread_row {
+	padding: 4px 10px 4px 10px;
+	margin-left: 5px;
+	margin-right: 5px;
+	height: 16px;
+	font-size: 10pt;
+	border-bottom: solid 1px #CDDAF9;
+}
+
+div.community_thread_left {
+	float: left;
+}
+
+div.community_thread_right {
+	font-size: 10pt;
+	padding-right: 33px;
+	float: right;
+}
+
+div#community_thread_bot {
+	width: 363px;
+	height: 23px;
+	background-image: url("/theme/images/community_thread_bot.png");
+}
+
+div#community_bot_right {
+	width: 289px;
+	height: 244px;
+	float: left;
+}
+
+div#community_forums {
+	width: 470px;
+	height: 89px;
+}

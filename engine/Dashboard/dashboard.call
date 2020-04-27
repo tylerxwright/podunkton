@@ -1,0 +1,18 @@
+<?php
+	include_once("../Core.php");
+	header('Content-Type: text/xml');
+?>
+<users>
+<?php
+	$result = $database->db_query("SELECT userID, name, email FROM Users");
+	while($row = mysql_fetch_object($result)){
+?>
+<user>
+<id><?php echo $row->userID; ?></id>
+<name><?php echo $row->name; ?></name>
+<email><?php echo $row->email; ?></email>
+</user>
+<?php
+	}
+?>
+</users>

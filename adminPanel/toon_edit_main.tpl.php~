@@ -1,0 +1,20 @@
+<?php
+	global $database;
+	global $session;
+	global $error;
+	global $core;
+
+	$result = $database->db_query("SELECT name,tid FROM Toons WHERE 1 ORDER BY tid");
+	
+
+	while($row = mysql_fetch_array($result))
+	{
+
+		echo "<a href='admin/toons/edit/".$row['tid']."'>".$row['name']."</a><br/>";
+
+			
+	}
+
+	
+
+?>
